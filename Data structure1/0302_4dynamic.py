@@ -10,6 +10,7 @@
 
 n=int(input())
 dp=[]
+
 for i in range(n):
     dp.append(list(map(int,input().split()))) # 이차원 리스트로 생성
 for i in range(1,n): # dp[0][0]~dp[0][2]는 입력값 그대로
