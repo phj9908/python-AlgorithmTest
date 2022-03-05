@@ -1,3 +1,5 @@
+# 1158 요세푸스 문제
+# 굳이 일렬로 풀어서 생각하는것보다 원테이블로 이해하는게 나음
 cnt, num =map(int,input().split()) # 7,3
 
 josephus = [i for i in range(1,cnt+1)] # {1,2,3,4,5,6,7}

@@ -1,3 +1,10 @@
+#10845 큐
+# -스택과 달리 선입선출 구조.
+# -스택의 top:bottom / 큐의 front : back (front:[0]/ back:[-1])
+# -스택은 append. 차곡차곡 쌓임
+# -*큐는 insert(0,원소). [0]의 자리에 차곡차곡 쌓임. 맨처음 넣은게 [-1]자리에 가있음
+# -스택은 pop(),맨뒤 제거/ 큐는 pop(0),맨 앞 제거
+
 from collections import deque
 import sys
 

@@ -1,7 +1,8 @@
+#1406 에디터
 import sys
 
-pop_arr=[]
-arr = list(sys.stdin.readline().strip())  # sys.stdin.readline의 입력에 stack기능 쓸려면 list()감싸주기
+pop_arr=[] # 커서 기준 오른쪽에 있는 문자열
+arr = list(sys.stdin.readline().strip())  # sys.stdin.readline의 입력에 stack기능 쓸려면 list()감싸주기 , 커서 기준 왼쪽에 있는 문자열
 m = int(sys.stdin.readline())
  
 for i in range(m):
