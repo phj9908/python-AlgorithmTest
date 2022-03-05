@@ -2,7 +2,7 @@
 n= int(input())
 dp=[[0]*10 for _ in range(n+1)]
 for i in range(1,10):
-    dp[1][i]=1
+    dp[1][i]=1 # 길이가 1인 i로 끝나는 수
 mod=1000000000
 
 for i in range(2,n+1):

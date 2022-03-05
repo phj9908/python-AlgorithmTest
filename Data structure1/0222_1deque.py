@@ -1,7 +1,7 @@
+#10866 덱
 from collections import deque
 from queue import Empty
 import sys
-from unittest.result import STDERR_LINE
 
 deq=deque()
 n= int(sys.stdin.readline())
@@ -55,8 +55,8 @@ str_list={
 for _ in range(n):
     str = sys.stdin.readline().split()
     
-    if len(str) ==1 :
-        str_list[str[0]](deq) # 
-    else :
+    if len(str) ==1 : # push_front, push_back 외 명령어
+        str_list[str[0]](deq) 
+    else :              # push_front, push_back  
         deq = str_list[str[0]](str[1],deq)
     
