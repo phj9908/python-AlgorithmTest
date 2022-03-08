@@ -1,5 +1,6 @@
-# 1935
+# 1935 후위표기식2, 후위표기식을 연산, 숫자를 스택에 할당
 # 후위표기식 개념 https://simsim231.tistory.com/54
+# 다시풀어보기
 
 n = int(input())
 str = input()

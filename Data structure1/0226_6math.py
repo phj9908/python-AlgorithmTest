@@ -14,7 +14,7 @@ def gcd(a,b): # 최대공약수 구하기
 for i in range(n):
     arr = list(map(int,input().split()))
     sum=0
-    for j in range(1,len(arr)-1): # 맨앞의 수는 입력할 수의 갯수임
+    for j in range(1,len(arr)-1): # 맨앞의 수는 입력할 수의 갯수임!
         for k in range(j+1,len(arr)):
             sum +=gcd(arr[j],arr[k])
     print(sum)

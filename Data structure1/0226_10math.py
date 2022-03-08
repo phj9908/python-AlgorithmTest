@@ -11,7 +11,7 @@ if n==0:
     print(0)
     exit() # 프로그랩 종료
 while n!=0 :
-    if n%-2:
+    if n%-2: # n이 -2로 나눠떨어지지 않을때
         n=n//-2 +1
         res='1'+res
     else:

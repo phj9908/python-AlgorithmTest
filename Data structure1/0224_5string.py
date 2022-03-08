@@ -1,10 +1,10 @@
-# 11655
+# 11655 ROT13
 
 str= input()
 res=''
 for i in str:
     if i == ' ' or ord(i)<ord('A'): # 공백이나 숫자일 때
-        res+=i
+        res+=i # 그대로 출력
     elif i.isupper() and ord(i)+13>90:
         res+=chr(64+ (ord(i)+13)-90) # 'A'=64
     elif ord(i)+13>122:

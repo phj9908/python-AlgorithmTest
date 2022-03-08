@@ -8,5 +8,5 @@ while b!=0 : # b가 0이 될때의 a값이 최대공약수
     a,b = b,a
     
 print(a) #gcd
-print(A*B//a) # lcm
+print(A*B//a) # lcm # 최소공배수 = 기존의 수 // 최대공약수
 

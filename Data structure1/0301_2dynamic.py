@@ -4,7 +4,7 @@
 n= int(input())
 dp=[[0]*2 for _  in range(91)] # range(n+1)로 하면 index err뜸
 dp[1] =[0,1] # 1
-dp[2] =[1,0] # 10
+dp[2] =[1,0] # 10 , 길이가 2인데 [마지막 수가 0인 수,1인수]
 dp[3] = [1,1] # 100,101
 
 for i in range(4,n+1):

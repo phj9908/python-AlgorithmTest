@@ -1,4 +1,4 @@
-#10820
+#10820 문자열 분석
 #is~() 메서드 활용
 #문제에서 몇개의 테스트케이스가 주어지는지 제한하지 않아서, EOF검사 해야함-> sys.stdin.readline()으로 입력 여부 파악
 # input()사용할 경우 try-except로 EOFErorr처리
