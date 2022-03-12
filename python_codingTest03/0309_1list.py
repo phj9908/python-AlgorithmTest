@@ -4,7 +4,6 @@
 
 from threading import Thread
 import time
-from xml.dom.expatbuilder import theDOMImplementation
 
 arr=[0,1,2,3,4]
 

@@ -1,14 +1,14 @@
 #슬라이딩 윈도우
 # two pointer 와 달리 두 개의 포인터를 사용하지 않고 고정된 크기의 부분만 확인
 
-num=[]
+#num=[]
 t_c=[]
 caf=[]
 tau=[]
 
 for _ in range(10):
     n, c, t = map(int,input().split())
-    num.append(n)
+    #num.append(n)
     caf.append(c)
     tau.append(t)
     t_c.append(t-c)
