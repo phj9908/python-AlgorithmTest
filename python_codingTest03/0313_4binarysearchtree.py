@@ -15,7 +15,7 @@ class Node():
         self.right=None
 class BinarySearchTree:
     def __init__(self):
-        self.root=None  
+        self.root=None  # 최상단 원소
 
     def set_root(self,data):
         self.root=Node(data)

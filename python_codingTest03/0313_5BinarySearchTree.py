@@ -44,8 +44,7 @@ class BinarySearchTree():
                 current_node.right=Node(data)
             else:
                 self.insert_node(current_node.right,data)
-        else:
-            if data == current_node.data:
+        elif data == current_node.data:
                 print(f'이미 {data}의 값이 존재합니다. 중복된 값은 삽입할 수 없습니다.')
                 return
 
