@@ -33,7 +33,7 @@ class Heap():    # 힙 선언
             self.arr[self.heap_cnt]=data
             return
 
-        self.arr[self.heap_cnt]=data
+        self.arr[self.heap_cnt]=data # 일단 마지막 노드에 추가
         insert_idx = self.heap_cnt
 
         while self.compare_with_parent(insert_idx): # 부모노드 값이 더 크면
