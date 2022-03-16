@@ -27,11 +27,12 @@ class Queue:
     def enqueue(self,item):
         if self.is_full():
             print('큐에 더 이상 데이터를 넣을 수 없습니다.')
+            
         else:
             self.tail=(self.tail+1)%MAX_QUEUE_SIZE
             self.arr[self.tail]=item # arr[tail]=item
 
-    def dequeue(self,item):
+    def dequeue(self):
         if self.is_empty():
             print('큐가 비어있습니다.')
         else:
