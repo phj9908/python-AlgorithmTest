@@ -1,49 +1,61 @@
-# 큐를 제대로 쓴 코드는 아닌 것 같음...일단 보류.. 큐라기 보단 스택
+MAX_QUEUE_SIZE=8
 
-import queue
+class Queue:
+    def __init__(self):
+        self.arr=[None]*MAX_QUEUE_SIZE
+        self.head=0
+        self.tail=0
 
-id_arr=[]
-time_arr=[]
+    def is_empty(self):
+        if self.head==self.tail:
+            return True
+        return False
 
+    def is_full(self):
+        if self.tail>=MAX_QUEUE_SIZE-1:
+            return True
+        return False
+
+    def enqueue(self,data):
+        if self.is_full():
+            print('큐가 꽉 찼습니다.')
+            return 
+        self.tail=(self.tail+1)%MAX_QUEUE_SIZE
+        self.arr[self.tail]=data
+
+    def dequeue(self):
+        if self.is_empty():
+            print('큐가 이미 비었습니다.')
+            return
+        self.head=(self.head+1)%MAX_QUEUE_SIZE
+        return self.arr[self.head]
+
+queue=Queue()
 for i in range(7):
     id, time= map(int,input().split())
-    id_arr.append(id)
-    time_arr.append(time)
+    queue.enqueue((id,time))
 
-queue=[]
-head=-1
 break_cnt=0
 sum_time=0
+current_time=0
+id_arr=[]
 
-while head<len(time_arr)-1:
-    
-    if sum(queue)<50:
-        head+=1
-        queue.append(time_arr[head])
-        if head==len(time_arr)-1:
-            sum_time+=sum(queue)
-            for _ in range(len(queue)):
-                print(id_arr[time_arr.index(queue.pop())],end=', ')
-            print()
-    
-    if sum(queue)==50:
-        sum_time+=sum(queue)
-        for _ in range(len(queue)):
-            print(id_arr[time_arr.index(queue.pop())],end=', ') # join은 리스트가 입력변수라서 그거 말고 다른 출력 방법??
-        print()
-        break_cnt+=1
-    
-    if sum(queue)>50:
-        queue.pop()
-        sum_time+=sum(queue)
-        
-        for _ in range(len(queue)):
-            print(id_arr[time_arr.index(queue.pop())],end=', ')
-        print()
-        break_cnt+=1
-        head-=1
+while not queue.is_empty():
+    id, time = queue.dequeue()
+    sum_time += time
 
-print(f'총 소요시간: {sum_time+break_cnt*10}분')
+    if current_time+time>50:
+        print(id_arr) # 그때까지 저장된 배열 출력
+        id_arr=[id]   # 저장됐던 아이디들 없애고 새로 저장
+        current_time=time  
+        break_cnt+=1
+
+    else:
+        current_time+=time
+        id_arr.append(id)
+
+print(id_arr) # 마지막 배열 출력
+print(f'총 소요시간: { sum_time+break_cnt*10}분')
         
 
 
