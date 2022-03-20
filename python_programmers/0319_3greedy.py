@@ -1,9 +1,6 @@
 # 조이스틱
 #https://bellog.tistory.com/152 
 
-from turtle import distance
-
-
 def solution(name):
     answer=0
     min_move=len(name)-1
