@@ -1,5 +1,5 @@
 # 트리의 최하단 노드 값 출력 & 레벨 출력
-# 수정해야함.하다말음
+# 수정필요
 
 import collections
 
@@ -46,17 +46,20 @@ def get_sample():
 
     return root
 
-def pre_order(node): # 부모노드 부터(최상단 부터)
+def pre_order(node,depth): # 부모노드 부터(최상단 부터)
+    global max_data
     if node==None:
         return
-
-    if node.get_height()== 1: #??수정하기
-        print(f'최하단 노드: {node.data}')
-    
-    pre_order(node.left)
-    pre_order(node.right)
+    height=node.get_height()
+    depth+=1
+    if depth>height:
+        height=depth
+        max_data=node.data
+    print(f'{node.data}',end=' ')
+    pre_order(node.left,depth)
+    pre_order(node.right,depth)
 
 root=get_sample()
-pre_order(root)
-print(root.get_height())
-print(root.get_size())
+pre_order(root,0)
+print('\n'+f'최하단의 놓이: {root.get_height()}')
+print(f'최하단 노드: {max_data}')

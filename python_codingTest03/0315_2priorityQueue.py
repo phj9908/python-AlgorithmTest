@@ -66,7 +66,6 @@ class Heap():
         return root
 
 def heap_sort(heap:Heap(),arr):
-    my_heap=[]
     res=[]
 
     for i in arr:

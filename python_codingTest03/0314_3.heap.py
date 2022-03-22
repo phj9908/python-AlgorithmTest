@@ -67,7 +67,7 @@ class Heap():    # 힙 선언
         self.arr[self.heap_cnt]=None # 맨 마지막 노드 삭제
         self.arr[idx]=terminal_data 
         self.heap_cnt-=1
-
+        
         while True:
             child_idx=self.compare_with_child(idx) # 자식노드들과 크기비교
             if child_idx==False: # = if not child_idx
