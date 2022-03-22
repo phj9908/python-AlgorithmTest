@@ -38,7 +38,7 @@ class Double_LL(object):
                 return target
         else: # idx가 리스트 크기 반 이상일 때            
             target = self.tail
-            for _ in range(self.size-1,idx,-1): # 역주행
+            for _ in range(self.size-1,idx,-1): # 역주행, idx+1까지 
                 target = target.prev
             return target
 
@@ -80,7 +80,7 @@ class Double_LL(object):
                 tmp_prev=tmp.prev # idx-1
                 new_node=Node(data,tmp_prev,tmp) 
                 tmp_prev.next=new_node # (idx-1의 next)= idx 에 new_node 추가
-                tmp.prev=new_node # idx
+                tmp.prev=new_node # idx+1에 tmp/ idx에 new_mode
         self.size+=1
 
     def delete(self,idx): 

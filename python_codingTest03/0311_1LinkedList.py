@@ -14,7 +14,7 @@
 class Node:
     def __init__(self,data,next=None): # data만 입력시 pointer초기값은 None
         self.data=data
-        self.next=next # or next
+        self.next=next
 
 #노드 연결해보기
 node1 = Node(1)

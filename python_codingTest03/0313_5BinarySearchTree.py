@@ -54,14 +54,6 @@ class BinarySearchTree():
         else:
             self.insert_node(self.root,data)
 
-    # def temp_data_insert(root): # 데이터 삽입 임시 함수
-    #     node_2=Node(2)
-    #     node_3=Node(10)
-    #     root.left=node_2
-    #     root.right=node_3
-    #
-    #     return root
-
     def get_next_node(self,node): # 해당 노드의 왼쪽 노드만 파기 (= 최솟값 도출) 
         while node.left:
             node=node.left
@@ -85,12 +77,13 @@ class BinarySearchTree():
                 if data<parent.data:
                     parent.left=current_node.left
                 else:
-                    parent.right=current_node.left # 이거 그려보면 이해감
+                    parent.right=current_node.left 
             elif current_node.left ==None and current_node.right!=None:
-                if data< parent.data:
+                # 모각코 이진트리 '데이터 삭제'중 -'삭제하려는 노드가 자식노드 하나만 가지는 경우' 그림 참고
+                if data< parent.data: 
                     parent.left=current_node.right
-                else:
-                    parent.right=current_node.right
+                else:   # 12 > 10
+                    parent.right=current_node.right # 10의 right자리에 12의 right 안착
             elif current_node.left!=None and current_node.right!=None:
                 
                 next_node=self.get_next_node(current_node.right) # 대상노드의 오른쪽 자식노드중 최솟값 갖는 노드 도출

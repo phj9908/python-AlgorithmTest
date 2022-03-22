@@ -24,7 +24,7 @@ class AVL():
     
     def rotate_right(self,current_node):
         x_node= current_node.left 
-        current_node.left = x_node.right # x에 오른쪽 자식노드가 있다면
+        current_node.left = x_node.right # x에 오른쪽 자식노드를 현재노드의 왼쪽자식으로 둠
         x_node.right = current_node # current_node가 x_node 서브트리로 내려감 (그림 참고!)
         
         current_node.height = max(self.height(current_node.left),self.height(current_node.right))+1 # 높이 갱신
