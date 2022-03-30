@@ -8,6 +8,6 @@ for i in range(1,n+1):
     for j in range(1,int(i**0.5)+1):
         if i<j*j:
             break
-        if dp[i] > 1+dp[i-j*j]: # = dp[j*j]+dp[i-j*j]
+        if dp[i] > 1+dp[i-j*j]: # = dp[j*j]+dp[i-j*j] i=11이면  dp[9]+dp[11-9]
             dp[i]=1+dp[i-j*j]
 print(dp[n])

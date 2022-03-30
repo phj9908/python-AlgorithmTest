@@ -5,6 +5,6 @@ tmp='0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 res=0
 
 for i in range(len(n)):
-    res+=tmp.index(n[i])*(b**(len(n)-1-i))
+    res+=(tmp.index(n[i]))*(b**(len(n)-1-i))
 
 print(res)

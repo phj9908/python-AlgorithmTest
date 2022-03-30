@@ -6,13 +6,13 @@ for _ in range(t):
 
     dp=[]
     for _ in range(2):
-        dp.append(list(map(int,input().split())))
+        dp.append(list(map(int,input().split()))) # 가로로 한 줄씩 점수 입력
 
     for j in range(1,n):
         if j==1:
             dp[0][j] += dp[1][j-1]
             dp[1][j] += dp[0][j-1]
-        else:
+        else:  
             dp[0][j] += max(dp[1][j-1],dp[1][j-2])
             dp[1][j] += max(dp[0][j-1],dp[0][j-2])
 

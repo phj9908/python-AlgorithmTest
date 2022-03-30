@@ -15,6 +15,6 @@ for i in range(n): # 각 동생들과 수빈이 사이 거리 도출
     dif.append(abs(a[i]-s)) 
 b=dif[0]
 for i in range(1,n): # 첫번째 수와 두번째 수의 최대공약수 구한 뒤, 그 최대공약수와 세번째 수 의 최대공약수 구하고...마지막까지 반복
-    b= gcd(dif[i],b)
+    b= gcd(b,dif[i])
 
 print(b)

@@ -15,5 +15,5 @@ dp[2] = max(card_price[2],dp[1]*2)
 for i in range(3,n+1):
     dp[i] = card_price[i] # 자기 자신으로 만드는 경우
     for j in range(1,i//2+1) : # i//2+1인 이유: i=5면 (dp[i-j],dp[j])에서 (4,1),(1,4)같은 중복 제거
-            dp[i] = max(dp[i],dp[i-j]+dp[j])
+            dp[i] = max(dp[i],dp[i-j]+dp[j]) # dp[i-j]+dp[j]는 예를들어 4번 카드 구매 최댓값+1번카드 구매 최대값
 print(dp[n])

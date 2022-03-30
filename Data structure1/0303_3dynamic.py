@@ -9,7 +9,7 @@ for i in range(1,n):
     for j in range(k):
         if j==0:    # 줄의 첫번째 항, 자기 바로위 숫자 더하기
             dp[i][j] +=dp[i-1][j]
-        elif j==i:  # 줄의 마지막 항 , 위와 동일
+        elif j==i:  # 줄의 마지막 항 , 위와 동일한 원리
             dp[i][j] +=dp[i-1][j-1]
         else:
             dp[i][j] +=max(dp[i-1][j-1],dp[i-1][j]) # 왼쪽 위 숫자와 오른쪽 위 숫자 중 더 큰 값 더하기
