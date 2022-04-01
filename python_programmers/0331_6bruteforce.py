@@ -22,9 +22,6 @@ dfs()
 # 다른 풀이 (더 빠름)
 # def dfs(start):
 #     if len(s)==m:
-#         for i in range(m-1):
-#             if s[i]>s[i+1]:  
-#                 return
 #         print(' '.join(map(str,s)))
 #         return
     
@@ -32,6 +29,6 @@ dfs()
 #         if i in s:
 #             continue
 #         s.append(i)
-#         dfs()
+#         dfs(i)
 #         s.pop()    
 # dfs(1)
