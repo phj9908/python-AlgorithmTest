@@ -11,7 +11,7 @@ def solution(phone_book):
         str=''
         for j in i:
             str+=j
-            if str in hash_table and str != i:
+            if str in hash_table.keys() and str != i:
                 return False
 
 

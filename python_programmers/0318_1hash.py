@@ -5,7 +5,8 @@ def solution(particiation,completion):
     hash_table={} # 해쉬 테이블 생성 (주의!!! {}!!!중괄호!!!)
 
     for i in particiation:
-        hash_table[i]=hash_table.get(i,0)+1 # get(key,defalut): 만약 key가 리스트에 없다면 defalut값 리턴)i가 처음 등장하면 1로 만들고, 그게 아니면 원래있던 값에 1더하기
+        hash_table[i]=hash_table.get(i,0)+1 # get(key,default): key:default 쌍 해시테이블에 생성
+        #>>i가 처음 등장하면 value가 1이되고, 그게 아니면 원래있던 값에 1더하도록
     for i in completion:
         hash_table[i] -=1       # particiaion의 동일한 이름나오면 -1(같은 key 등장 시 값에서 -1) ==> 결국 미완주자 한명 key의 value값은 1이 됨
     
@@ -13,6 +14,7 @@ def solution(particiation,completion):
         if v>0:
             answer=k
     return answer
+print(solution(["mislav", "stanko", "mislav", "ana"],["stanko", "ana", "mislav"]))
 
 # # 다른 풀이1(딕셔너리 이용)
 # import collections
