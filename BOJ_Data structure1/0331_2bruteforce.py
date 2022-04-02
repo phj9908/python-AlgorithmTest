@@ -8,7 +8,7 @@ n=int(input())
 
 for _ in range(n):
     m,n,x,y=map(int,input().split())
-    while x<=m*n: # 최소공배수 함수쓰면 시간초과해서 그냥 m*n
+    while x<=m*n:
         if x%n == y%n:
             print(x)
             break

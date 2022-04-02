@@ -44,9 +44,9 @@ def tetromino(i,j):
     for x in range(19):
         sum=0
         for y in range(4):
-            try:    # 인덱스 아웃 에러가 발생할수도 있음
+            try:    
                 sum+= arr[i+case[x][y][0]][j+case[x][y][1]]
-            except:
+            except:# 인덱스 아웃 에러가 발생할수도 있음
                 break
         check(sum)
         

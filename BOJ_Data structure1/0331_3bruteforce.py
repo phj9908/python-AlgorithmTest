@@ -31,13 +31,19 @@ else:
 
     print(answer)
 
-# 다른 풀이
-# n = input()
-# n_len = len(n) - 1
-# c = 0
-# i = 0
-# while i < n_len: # n-1자리수 까지 총 자리수 합
-#     c += 9 * (10 ** i) * (i + 1)
-#     i += 1
-# c += ((int(n) - (10 ** n_len)) + 1) * (n_len + 1) # n자리수 숫자 따로 계산, 99를 100-1로 계산.
-# print(c)
+# 다른 풀이 : 99를 100-1로 계산.
+# num=input()
+# length=len(num)
+
+# ans=0
+# if length==1:
+#     print(length)
+# else:
+#     while length>1: 
+#         if length==len(num):
+#             ans+=(int(num)-((10**(length-1))-1))*length 
+#         else:
+#             ans+=(((10**length)-1)-(10**(length-1)-1))*length
+#         length-=1
+#     ans+=9
+#     print(ans)
