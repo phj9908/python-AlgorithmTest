@@ -1,8 +1,4 @@
 #후위표기식 연산
-
-from xml.etree.ElementPath import ops
-
-
 class ArrayStack:
 
     def __init__(self):

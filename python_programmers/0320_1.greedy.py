@@ -1,4 +1,4 @@
-#큰 수 만들기
+#큰 수 만들기, stack 활용
 def solution(number, k):
     
     collected=[] # 맨 앞부터 숫자 하나씩 담을 리스트
@@ -14,5 +14,7 @@ def solution(number, k):
 
     if k>0: # 9876같이 이미 내림차순 정렬 돼있으면
         collected=collected[:-k] # 뒤에서부터 k개 만큼 빼기
+        # 9876일때 k=2면 76자르기. 역주행은 자르려는 위치-1니까 -2
+        
     answer = ''.join(collected) # 문자열 하나!로 반환하기 위함
     return answer

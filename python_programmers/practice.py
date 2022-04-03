@@ -1,26 +1,18 @@
+def solution(priorities,location):
+    from collections import deque
+    answer=0
 
-def solution(answers):
-    answer=[]
+    stack=deque([(v,i) for i,v in enumerate(priorities)])
 
-    num1=[1,2,3,4,5]
-    num2=[2,1,2,3,2,4,2,5]
-    num3=[3,3,1,1,2,2,4,4,5,5]
-    score=[0,0,0]
-    
-    for i,v in enumerate(answers):
-        if v==num1[i%len(num1)]:
-            score[0]+=1
-        if v==num2[i%len(num2)]:
-            score[1]+=1
-        if v==num3[i%len(num3)]:
-            score[2]+=1
-    for i,v in enumerate(score):
-        if max(score)==v:
-            answer.append(i+1)
+    while stack:
+        item=stack.popleft()
+        if stack and item[0]<max(stack)[0]:
+            stack.append(item)
+        else:
+            answer+=1
+            if item[1]==location:
+                break
     return answer
-
-
-    
     
 
     

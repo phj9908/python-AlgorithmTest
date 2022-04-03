@@ -5,10 +5,6 @@
 # )이면 (나올 때 까지 스택에서 pop,출력
 # 연산자면 스택에서 이보다 높거나 같은 우선순위들을 pop, 출력 그리고 이 연산자는 스택에 push
 # 끝까지 왔다면 스택에 남은 연산자들은 모두 pop, 출력
-
-from xml.etree.ElementPath import ops
-
-
 class ArrayStack:
 
     def __init__(self):

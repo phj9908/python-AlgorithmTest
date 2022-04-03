@@ -37,6 +37,6 @@ def solution(ex):
                 return False
             else:
                 t= S.pop()
-                if t!=match[c]:
+                if t!=i:
                     return False
     return S.isEmpty()  # for문을 다 돌고난 후 스택이 비었으면 괄호가 짝맞게 있던거고 안 비어있다면 짝이 안 맞는 거니까

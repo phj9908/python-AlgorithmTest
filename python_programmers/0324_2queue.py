@@ -2,9 +2,6 @@
 
 # 이중연결리스트로 큐 구현
 
-from unittest import result
-
-
 class Node:
     def __init__(self,item):
         self.data=item
