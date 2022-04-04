@@ -16,7 +16,8 @@ def solution(operation):
             if oper[1]=='-1':
                 min=heapq.heappop(answer)
             else: # 최댓값 pop 할 때!
-                max=answer.pop(answer.index(heapq.nlargest(1,answer)[0])) 
+                max=answer.pop(answer.index(heapq.nlargest(1,answer)[0]))  
+                # answer.index(heapq.nlargest(1,answer)가 리스트로 반환하기에 [0]로 인덱스 지정 해주기
     if len(answer)==0:
         return [0,0]
     else:

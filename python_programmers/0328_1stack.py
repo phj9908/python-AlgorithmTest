@@ -7,7 +7,7 @@ def solution(bridge_length,weight,truck_weights):
     bridge_weight=0 # 현재 다리위의 트럭 무게
 
     while bridge or bridge_weight>0:
-        answer+=1   # 트럭이 다리 지나는 과정, 경과시간 계산
+        answer+=1   # 트럭하나 지나감, 경과시간 +1
         removed_truck=bridge.pop(0)
         bridge_weight-=removed_truck
         
