@@ -35,11 +35,6 @@ case = [    # 기본, 대칭, 회전 다 포함한 테트로미노 좌표 정보
     [[0, 0], [1, 0], [2, 0], [1, 1]]
 ]
 
-def check(sum):
-    global max
-    if sum > max:
-        max=sum
-
 def tetromino(i,j):
     for x in range(19):
         sum=0
@@ -48,7 +43,8 @@ def tetromino(i,j):
                 sum+= arr[i+case[x][y][0]][j+case[x][y][1]]
             except:# 인덱스 아웃 에러가 발생할수도 있음
                 break
-        check(sum)
+        if sum > max:
+            max=sum
         
 for i in range(n):
     for j in range(m):
