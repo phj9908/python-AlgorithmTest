@@ -1,15 +1,21 @@
-num=input()
-length=len(num)
+import sys
 
-ans=0
-if length==1:
-    print(length)
-else:
-    while length>1: 
-        if length==len(num):
-            ans+=(int(num)-((10**(length-1))-1))*length 
-        else:
-            ans+=(((10**length)-1)-(10**(length-1)-1))*length
-        length-=1
-    ans+=9
-    print(ans)
+n=int(input())
+arr=[ list(map(int,input().split())) for i in range(n)]
+min_value=sys.maxsize
+
+def dfs(start,curr,value,s):
+    global min_value
+    if len(s)==n:
+        if arr[curr][start]!=0:
+            min_value=min(min_value,value+arr[curr][start])
+        return
+    
+    for i in range(n):
+        if arr[curr][i]!=0 and i not in s and value<min_value:
+            s.append(i)
+            dfs(start,i,value+arr[curr][i],s)
+            s.pop()
+for i in range(n):
+    dfs(i,i,0,[i])
+print(min_value)
