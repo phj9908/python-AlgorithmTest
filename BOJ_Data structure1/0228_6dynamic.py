@@ -1,4 +1,4 @@
-# 15990 :1,2,3 더하기 5
+# 15990 :1,2,3 더하기 5 : 같은 수 중복사용X
 # https://kwangkyun-world.tistory.com/entry/Python%ED%8C%8C%EC%9D%B4%EC%8D%AC-15990-%EB%B0%B1%EC%A4%80-1-2-3-%EB%8D%94%ED%95%98%EA%B8%B0-5
 # n=6일 때 , 
 # dp[5]에서 2로 끝난거 +1 or 3으로 끝난거에 +1 ->dp[6][0]

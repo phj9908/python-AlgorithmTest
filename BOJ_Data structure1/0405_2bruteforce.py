@@ -1,5 +1,5 @@
 # 10971 외판원 순회2 : 여러 도시중에서 한 도시 중에 다른도시로 이동하는 최소비용의 이동순서 도출, 각 도시는 한번만 방문+ 원래 시작점에 돌아오기
-# https://www.youtube.com/watch?v=-zb54MpMgBY 나중에 듣기!!!
+# 나중에 책 한번 보기
 
 import sys
 
@@ -23,7 +23,7 @@ def dfs_backtracking(start, curr, value, s): #시작도시,현재도시,비용, 
             s.pop() 
 
 
-#도시마다 출발점을 지정 왜 출발점을 (i,i)로 하지???
+#도시마다 출발점을 지정 (i번째 도시의 출발점은 W[i][i]이다,항상 0이다)
 for i in range(n):
     dfs_backtracking(i, i, 0, [i])
 
