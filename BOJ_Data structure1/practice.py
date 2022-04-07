@@ -1,21 +1,10 @@
-import sys
+n,m=map(int,input().split())
 
-n=int(input())
-arr=[ list(map(int,input().split())) for i in range(n)]
-min_value=sys.maxsize
+dp=[ list(map(int,input().split())) for i in range(2)]
+dp[1][0]+=dp[0][0]
 
-def dfs(start,curr,value,s):
-    global min_value
-    if len(s)==n:
-        if arr[curr][start]!=0:
-            min_value=min(min_value,value+arr[curr][start])
-        return
+for i in range(1,m):
+    dp[0][i]+=dp[0][i-1]
+    dp[1][i]+=max(dp[1][i-1],dp[0][i])
     
-    for i in range(n):
-        if arr[curr][i]!=0 and i not in s and value<min_value:
-            s.append(i)
-            dfs(start,i,value+arr[curr][i],s)
-            s.pop()
-for i in range(n):
-    dfs(i,i,0,[i])
-print(min_value)
+print(dp[1][m-1])
