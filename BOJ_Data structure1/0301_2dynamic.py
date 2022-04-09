@@ -10,7 +10,7 @@ dp[3] = [1,1] # 100,101
 for i in range(4,n+1):
     for j in range(2):
         if j==0:
-            dp[i][j] = dp[i-1][1]+dp[i-1][0] 
+            dp[i][j] = dp[i-1][1]+dp[i-1][0] # 0뒤에는 0,1 이 연속해서 올 수 있음
         else :
             dp[i][j] = dp[i-1][0] # 1이 연속해서 나올수 없기에
 print(sum(dp[n]))

@@ -1,6 +1,3 @@
-from tkinter import N
-
-
 class CircularQueue:
     def __init__(self,n):
         self.maxCount=n

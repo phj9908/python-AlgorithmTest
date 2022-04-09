@@ -19,10 +19,11 @@ def solution(n, lost, reserve):
 
     return len([x for x in students[1:-1] if x>0]) # 1번 부터 n번 중에서 1의 값을 갖는 학생의 수 반환 (마지막에서 두번째는 인덱스로 -2임 따라서 [1:-1])
 
+
+
+
 # # 다른풀이(set,교집합 이용)
-
 # def solution(n, lost, reserve):
-
 #     s=set(lost)&set(reserve) # lost와 reserve둘다 속한 사람
 #     l_stu= set(lost)-s
 #     r_stu=set(reserve)-s

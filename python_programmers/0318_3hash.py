@@ -18,6 +18,9 @@ def solution(clothes):
 
     return answer-1 # 최소 한개의 의상은 입기에 -1해주기
 
+
+
+
 # # 다른 풀이(Counter,reduce이용)
 # Counter() : 'hello' => {'h':1,'e':1,'l':2,'o':1}
 # def solution(clothes):
