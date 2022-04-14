@@ -1,8 +1,8 @@
 # 기능 개발
 
 def solution(progresses, speeds):
-    print(progresses)
-    print(speeds)
+    # print(progresses)
+    # print(speeds)
     answer = []
     time = 0
     count = 0

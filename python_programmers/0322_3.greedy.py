@@ -1,4 +1,4 @@
-# 단순카메라
+# 단속 카메라
 
 def solution(routes):
 
