@@ -16,7 +16,7 @@ for t in range(1, 11) :
             x=int(command[i+1])
             y=int(command[i+2])
             for j in range(1,y+1):
-                del(word[x+j])
+                del(word[x])
         if command[i]=='A':
             y=int(command[i+1])
             s=command[i+2:]
