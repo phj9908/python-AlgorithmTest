@@ -16,7 +16,7 @@ for i in str:
         stack.append(i)
     elif i == '+' or i=='-':
         while stack and stack[-1] != '(':
-                result.append(stack.pop())  
+            result.append(stack.pop())  
         stack.append(i)
     elif i ==')':
         while stack and stack[-1] != '(':

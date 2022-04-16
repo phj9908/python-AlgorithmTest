@@ -15,7 +15,7 @@ stack = [] # nums인덱스 할당용
 result=[-1]*n
 
 for i in range(n):
-    while stack and (nums_cnt[nums[stack[-1]]] < nums_cnt[nums[i]]): # 자신보다 더 큰 빈도 값이 나타났을 때
+    while stack and (nums_cnt[nums[stack[-1]]] < nums_cnt[nums[i]]): # 더 큰 빈도 값이 나타났을 때
         result[stack.pop()] = nums[i]
     stack.append(i)
 print(*result) # -1 -1 1 2 2 1 -1
