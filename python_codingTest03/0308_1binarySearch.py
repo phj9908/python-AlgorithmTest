@@ -16,9 +16,9 @@ while start <= end :
     for i in arr:
         if i > mid:
             total += i - mid
-    if total <m:
+    if total <m: # 떡의 양이 부족한 경우 
         end=mid-1
-    else:
+    else:        # 떡의 양이 충분한 경우
         res = mid
         start = mid +1
 

@@ -1,22 +1,17 @@
-def dfs(arr, n, row):
-    cnt=0
+def recur(idx,score,cal):
+    if cal>l:
+        return
+    sum_score=max(sum_score,score)
 
-    if row==n:
-        return 1
-
-    for col in range(n):
-        arr[row]=col
-
-        for x in range(row):
-            if arr[x]==arr[row]:
-                break
-            elif abs(arr[row]-arr[x])==row-x:
-                break
-        else:
-            cnt+=dfs(arr,n,row+1)
+    if idx>n:
+        return
+    recur(idx+1,score+arr[idx][0],score+arr[idx][1])
+    recur(idx+1,score,cal)
     
-    return cnt
-
-n=int(input())
-arr=[0]*n
-print(dfs(arr,n,0))
+n,l=map(int,input().split())
+arr=[]
+for i in range(n):
+    arr.append(list(map(int,input().split())))
+sum_score=0
+recur(0,0,0)
+print(sum_score)
