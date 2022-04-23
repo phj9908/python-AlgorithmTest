@@ -1,4 +1,4 @@
-# 1873. 상호의 배틀필드( 샘플은 맞췄는데 다른 테케 다 틀림.......)
+# 1873. 상호의 배틀필드( 샘플은 맞췄는데 다른 테케 틀림.......)
 tc=int(input())
 for t in range(1,tc+1):
     h,w= map(int,input().split())
@@ -88,8 +88,8 @@ for t in range(1,tc+1):
                 x+=dx[1]
                 
 
-print(f'#{t}',end=' ')
-for i in range(h):
-    print(''.join(arr[i]))
+    print(f'#{t}',end=' ')
+    for i in range(h):
+        print(''.join(arr[i]))
 
     
