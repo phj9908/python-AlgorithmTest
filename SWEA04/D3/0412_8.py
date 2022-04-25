@@ -15,8 +15,8 @@ for t in range(1, 11) :
         if command[i]=='D':
             x=int(command[i+1])
             y=int(command[i+2])
-            for j in range(1,y+1):
-                del(word[x])
+            for j in range(y):
+                del(word[x]) # del(리스트[i])하면 저절로 i자리에 i+1번째 원소가 들어오기에  word[x+j]아님!
         if command[i]=='A':
             y=int(command[i+1])
             s=command[i+2:]
