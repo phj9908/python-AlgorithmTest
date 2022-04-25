@@ -1,8 +1,5 @@
 # 1961.숫자 배열회전
 
-
-
-
 tc= int(input())
 for t in range(1,tc+1):
     n=int(input())
