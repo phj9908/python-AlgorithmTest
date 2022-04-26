@@ -1,17 +1,21 @@
-def recur(idx,score,cal):
-    if cal>l:
-        return
-    sum_score=max(sum_score,score)
+def recur(subset,idx):
+    global cnt
 
-    if idx>n:
+    if idx>=n:
         return
-    recur(idx+1,score+arr[idx][0],score+arr[idx][1])
-    recur(idx+1,score,cal)
-    
-n,l=map(int,input().split())
-arr=[]
-for i in range(n):
-    arr.append(list(map(int,input().split())))
-sum_score=0
-recur(0,0,0)
-print(sum_score)
+    subset.append(arr[idx])
+    if sum(subset)==k:
+        cnt+=1
+
+    recur(subset,idx+1)
+    subset.pop()
+    recur(subset,idx+1)
+
+n,k=map(int,input().split())
+arr=list(map(int,input().split()))
+cnt=0
+recur([],0)
+
+
+
+

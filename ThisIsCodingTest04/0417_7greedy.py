@@ -1,15 +1,12 @@
-# (백준 1439)문자열 뒤집기
-import math
+# (백준 1439)문자열 뒤집기(다시풀어보기)
+word=input()
+cnt0=0 # 모두 0으로 바꾸는 경우
+cnt1=0 # 모두 1로 바꾸는 경우
 
-n=input()
-start=[]
-answer=0
-for i in range(len(n)-1):
-    if n[i]!=n[i+1]:
-        start.append(i)
-    
-if len(start)%2==0:
-    answer=len(start)//2
-else:
-    answer=math.ceil(len(start)/2)
-print(answer)
+for i in range(len(word)-1):
+    if word[i]!=word[i+1]:
+        if word[i]=='0':
+            cnt0+=1
+        else:
+            cnt1+=1
+print(min(cnt0,cnt1))

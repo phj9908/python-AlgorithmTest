@@ -2,12 +2,12 @@
 n=int(input())
 arr=sorted(list(map(int,input().split())))
 answer=0
-while len(arr)>0:
-    p=arr[0]
-    while p>0:
-        arr.pop(0)
-        p-=1
-    answer+=1
+cnt=0
+for i in arr:
+    cnt+=1
+    if cnt>=i:
+        answer+=1
+        cnt+=1
 print(answer)
 
          

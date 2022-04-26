@@ -16,7 +16,7 @@ for t in range(1,tc+1):
     code_arr=[]
 
     for i in range(len(arr)):
-        if '1' in arr[i]:                            # 암호 시작 줄 및 암호 구간 도출
+        if '1' in arr[i]:       # 암호 시작 줄 및 암호 구간 도출
             for j in range(m-1,-1,-1):
                 if arr[i][j]=='1':
                     end=j

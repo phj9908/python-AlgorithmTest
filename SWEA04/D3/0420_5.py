@@ -28,7 +28,7 @@ for t in range(1,tc+1):
         else:
             o_time=abs(o_stack[-1]-n)+1
             o_total+=o_time
-            if b_time<o_time:
+            if b_time<o_total:
                 if b_total<o_total:
                     o_total-=b_total
                 else:

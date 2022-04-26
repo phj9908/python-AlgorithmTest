@@ -17,8 +17,9 @@ for t in range(1,11):
         # if nums[i] ==nums[i+1]:
         #     del(nums[i:i+2])
         #     n-=2
-        #     i-=2
-        # i+=1
+        #     i-=1
+        # else:
+        #     i+=1
         # if i==n-1:
         #     break
         if nums[i]==nums[i+1]:

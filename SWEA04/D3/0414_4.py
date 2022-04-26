@@ -9,7 +9,7 @@ def check(arr,len):
     while len<101:
         for j in range(100-len+1):
             #str=arr[j:j+len]
-            if str==arr[j+len-1:j-1:-1]:
+            if str==arr[j+len-1:j-1:-1]: # 회문인지 체크
                 res_length=max(res_length,len)
         len+=1
     return res_length

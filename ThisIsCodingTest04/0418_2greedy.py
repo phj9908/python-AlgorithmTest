@@ -1,6 +1,6 @@
-# 볼링공 고르기
+# 볼링공 고르기(다시 풀어보기)
 
-# 답안( 책 풀이 참고 )
+# 답안( 책 풀이참고 )
 n,m=map(int,input().split())
 arr=list(map(int,input().split()))
 

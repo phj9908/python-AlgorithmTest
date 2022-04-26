@@ -2,7 +2,6 @@
 
 # 내장함수 bisect 활용 ver
 from bisect import bisect_left,bisect_right
-from turtle import end_fill
 
 n,x=map(int,input().split())
 arr=list(map(int,input().split()))

@@ -14,6 +14,7 @@ for t in range(1,tc+1):
     for i in range(len(arr)):
         for j in range(arr[i][0],arr[i][1]+1):
             p_hash[j]+=1
+            
     answer=[]
     for i in range(p):
         answer.append(p_hash[int(input())])

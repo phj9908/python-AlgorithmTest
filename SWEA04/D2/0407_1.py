@@ -1,4 +1,4 @@
-# 1859 백만장자 프로젝트
+# 1859 백만장자 프로젝트(다시풀어보기)
 # 문제이해 https://itcrowd2016.tistory.com/87
 
 tc=int(input())
@@ -6,7 +6,7 @@ for t in range(1,tc+1):
     n= int(input())
     nums= list(map(int,input().split()))
     sum=0
-    if nums.index(max(nums))!=0:          
+    if nums.index(max(nums))!=0:  # 가장 큰 값이 0인덱스면 아무것도 안사는것이 최대이익이기에 답은 0
         max_p=nums[-1]
         for i in range(len(nums)-1,-1,-1):
  

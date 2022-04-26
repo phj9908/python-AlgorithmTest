@@ -1,23 +1,14 @@
-# 만들수 없는 금액
-import time
-start_time=time.time()
-
+# 만들수 없는 금액( 다시풀기 )
 n=int(input())
 arr=list(map(int,input().split())) # 3 2 1 1 9
+arr.sort()
 
-i=1
-arr2=[]
-while i<=len(arr):
-    for j in range(len(arr)-(i-1)):
-        arr2.append(sum(arr[j:j+i]))
-    i+=1
-
-k=1
-while 1:
-    if k not in arr2:
+target=1 # 만들려는 금액
+for i in arr:
+    if target<i: # 만들수 없는 금액을 찾았을 때
         break
-    k+=1
+    target+=i
+print(target)
 
-print(k)
-end_time=time.time()
-print(f'time: {end_time-start_time}')        
+
+ 
