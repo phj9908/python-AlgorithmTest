@@ -1,5 +1,5 @@
-# 미로찾기(다시풀기)
-# bfs
+# 미로탈출(다시풀기)
+# dfs가 아닌! bfs
 from collections import deque
 
 n,m= map(int,input().split())
