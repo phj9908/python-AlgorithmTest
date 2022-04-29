@@ -1,95 +1,56 @@
-# 1873. 상호의 배틀필드( 샘플은 맞췄는데 다른 테케 틀림.......)
+# 1873. 상호의 배틀필드( 다시풀기.. )
+
+move_list = [(-1, 0), (1, 0), (0, -1), (0, 1)] # 상 하 좌 우
+command_dict = {'U' : 0, 'D' : 1, 'L' : 2, 'R' : 3, 'S' :4,
+                '^' : 0, 'v' : 1, '<': 2, '>': 3, 0: '^', 1: 'v', 2:'<', 3:'>'} # 상하좌우 순대로 value값이 0,1,2,3 (move_list의 인덱스와 일치)
+serch_list = ['<', '>', '^', 'v']
+
 tc=int(input())
 for t in range(1,tc+1):
     h,w= map(int,input().split())
     arr=[ list(input()) for i in range(h)]
     n=int(input())
-    str=list(input())
-
-    #serch_list = ['<', '>', '^', 'v']
-    y,x=0,0
-    dx=[0,1,0,-1]
-    dy=[1,0,-1,0]
-    d=[0,0]
+    commands=input()
 
     for i in range(h):
         for j in range(w):
-            if arr[i][j]=='<':
-                y,x=i,j
-                d=[dy[3],dx[3]]
+            if arr[i][j] in serch_list:
+                tank_pos=(i,j,command_dict[arr[i][j]])
                 break
-            elif arr[i][j]=='>':
-                y,x=i,j
-                d=[dy[1],dx[1]]
-                break
-            elif arr[i][j]=='v':
-                y,x=i,j
-                d=[dy[0],dx[0]]
-                break
-            elif arr[i][j]=='^':
-                y,x=i,j
-                d=[dy[2],dx[2]]
-                break   
-        else : continue # break에 안 걸렸다면
-        
-        break #  if문 안의 break에 걸렸다면 전체 반복문 나가기
+        else: 
+            continue # break에 안걸리면 계속 진행
+        break    # break에 걸렸다면 모든 반복문 탈출
 
-    while str:
-        com=str.pop(0)
-        if com=='S':
-            if x+d[1]<=w-1 and x+d[1]>=0 and y+d[0]>=0 and y+d[0]<=h-1 and arr[y+d[0]][x+d[1]]!='#':
-                nx=x
-                ny=y
-                while 1:
-                    ny+=d[0]
-                    nx+=d[1]
-                    if nx>w-1 or nx<0 or ny<0 or ny>h-1:
-                        break
-                    if arr[ny][nx]=='*':
-                        arr[ny][nx]='.'
-                        break
-        if com=='U':
-            d=[dy[2],dx[2]]
-            arr[y][x]='^'
-            if y+dy[2]>=0 and arr[y+dy[2]][x+dx[2]]=='.':
-                arr[y][x]='.'
-                arr[y+dy[2]][x+dx[2]]='^'
-                y+=dy[2]
-                x+=dx[2]
-                
-                
-        if com=='D':
-            d=[dy[0],dx[0]]
-            arr[y][x]='v'
-            if y+dy[0]<h and arr[y+dy[0]][x+dx[0]]=='.':
-                arr[y][x]='.'
-                arr[y+dy[0]][x+dx[0]]='v'
-                y+=dy[0]
-                x+=dx[0]
-                
+    for com in commands:
+        temp=command_dict[com]
 
-        if com=='L':
-            d=[dy[3],dx[3]]
-            arr[y][x]='<'
-            if x+dx[3]>=0 and arr[y+dy[3]][x+dx[3]]=='.':
-                arr[y][x]='.'
-                arr[y+dy[3]][x+dx[3]]='<'
-                y+=dy[3]
-                x+=dx[3]
-                
+        if temp==4: # 포탄 발사라면
+            dy=tank_pos[0] # 탱크가 바라보는 방향(위치)
+            dx=tank_pos[1]
 
-        if com=='R':
-            d=[dy[1],dx[1]]
-            arr[y][x]='>'
-            if x+dx[1]<w and arr[y+dy[1]][x+dx[1]]=='.':
-                arr[y][x]='.'
-                arr[y+dy[1]][x+dx[1]]='>'
-                y+=dy[1]
-                x+=dx[1]
-                
+            while 1:
+                dy+=move_list[tank_pos[2]][0]
+                dx+=move_list[tank_pos[2][1]]
+
+                if dy<0 or dy>h-1 or dx<0 or dx>w-1 or arr[dy][dx]=='#':
+                    break
+                if arr[dy][dx]=='*':
+                    arr[dy][dx]='.'
+                    break
+        else: # 이동 명령이라면
+            y=tank_pos[0]
+            x=tank_pos[1]
+            dy=y+move_list[temp][0]
+            dx=x+move_list[temp][1]
+
+            tank_pos=(y,x,temp)
+            if h>dy>=0 and w>dx>=h and arr[dy][dx]=='.':
+                arr[y][x]='.' # 기존 위치를 평지로 바꾸기
+                arr[dy][dx]=command_dict[temp]  # 가야하는 위치에 탱크표시
+                tank_pos=(dy,dx,temp) # 탱크위치 갱신
 
     print(f'#{t}',end=' ')
-    for i in range(h):
-        print(''.join(arr[i]))
+    for i in arr:
+        print(''.join(i))
 
     
