@@ -3,15 +3,16 @@
 
 def dfs(idx,cnt): # 인덱스, 교환한 횟수
     global answer
+
     if cnt==int(target):
         answer=max(answer,int(''.join(nums)))
         return
-    for now in range(idx,len(nums)): # range(idx,len(nums)) : 기준 인덱스로부터 오른쪽 원소만 탐색하게끔
-        for max_idx in range(now+1,len(nums)):
+    for now in range(idx,len(nums)): # range(idx,len(nums)) : 기준 인덱스로부터 오른쪽 원소만 탐색하게끔 now: 기준인덱스
+        for max_idx in range(now+1,len(nums)): # 기준인덱스의 오른쪽 인덱스
             nums_now=nums[now] # 디버깅용
-            nums_mam_idx=nums[max_idx]
-            if nums_now<=nums_mam_idx:
-                nums[now],nums[max_idx]=nums[max_idx],nums[now] 
+            nums_max_idx=nums[max_idx]
+            if nums_now<=nums_max_idx: # 기준인덱스의 오른쪽인덱스마다 기준원소보다 큰지 안큰지 따지고
+                nums[now],nums[max_idx]=nums[max_idx],nums[now]  # 그렇다면 스왑
                 dfs(now,cnt+1)
                 nums[now],nums[max_idx]=nums[max_idx],nums[now] # 원상복귀
 
