@@ -1,10 +1,21 @@
-n,m=map(int,input().split())
+arr=[]
+for i in range(9):
+    arr.append(int(input()))
+arr=sorted(arr)
+s=[]
 
-dp=[ list(map(int,input().split())) for i in range(2)]
-dp[1][0]+=dp[0][0]
+def dfs(start):
+    global answer
 
-for i in range(1,m):
-    dp[0][i]+=dp[0][i-1]
-    dp[1][i]+=max(dp[1][i-1],dp[0][i])
-    
-print(dp[1][m-1])
+    if len(s)==7:
+        if sum(s)==100:
+            for i in s:   # answer=s 해서 마지막에 출력하려 했으나 그렇게하면 answer이랑 s랑 연동되어서 answer까지 계속 바뀜
+                print(i) 
+            exit()
+        return 
+    for i in arr[start:]:
+        s.append(i)
+        dfs(arr.index(i)+1)
+        s.pop()
+
+dfs(0)
