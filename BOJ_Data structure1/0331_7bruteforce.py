@@ -5,7 +5,7 @@ s=[]
 
 def dfs():
     if len(s)==m:
-        print(' '.join(map(str,s)))
+        print(*s)
         return
     
     for i in range(1,n+1):

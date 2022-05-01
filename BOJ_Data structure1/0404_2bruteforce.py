@@ -7,7 +7,7 @@ num=list(map(int,input().split()))
 swap=0
 
 for i in range(len(num)-1,0,-1): 
-    if num[i-1]>num[i]: # 앞칸이 뒤칸보다 클 때
+    if num[i-1]>num[i]: # 뒤칸보다 앞칸이 클 때
         swap=i-1
         break
 else: # 오름차순인 경우

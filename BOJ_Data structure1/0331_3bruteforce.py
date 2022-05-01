@@ -1,10 +1,4 @@
 # 1748 수 이어쓰기1
-# 아래 코드는 메모리초과
-# num = int(input())
-# str_num=[ str(i) for i in range(1,num+1)]
-# str_num=''.join(str_num)
-# print(len(str_num))
-
 # 규칙 찾기!
 # 1-9까지 숫자 연결하면 한자리 수가 9개니까 1*9
 # 10-99                두자리      90개    2*90
@@ -26,3 +20,10 @@ else:
         length-=1
     ans+=9
     print(ans)
+
+
+# 아래 코드는 메모리초과
+# num = int(input())
+# str_num=[ str(i) for i in range(1,num+1)]
+# str_num=''.join(str_num)
+# print(len(str_num))

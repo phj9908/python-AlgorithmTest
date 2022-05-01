@@ -7,7 +7,7 @@ visited=[False for _ in range(n)]
 
 def dfs(start):
     if len(s)==m:
-        print(' '.join(map(str,s)))
+        print(*s)
         return
     
     remember_me=0

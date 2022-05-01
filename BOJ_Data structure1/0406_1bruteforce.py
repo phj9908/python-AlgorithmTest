@@ -2,23 +2,23 @@
 
 #백트래킹ver
 def dfs(start):
-    if len(visited)==6:
-        print(*visited)
+    if len(s)==6:
+        print(*s)
         return 
     for i in s[start:]:
-        if i in visited:
+        if i in s:
             continue
-        visited.append(i)
+        s.append(i)
         dfs(s.index(i))
-        visited.pop()
+        s.pop()
 
 while True:
-    visited=[]
+    s=[]
     nums= list(map(int,input().split()))
     n=nums[0]
     if n==0:
         break
-    s=nums[1:] # 혹은 ==> del nums[0]
+    del nums[0] # 혹은 ==> del nums[0]
 
     dfs(0)
     print() # 테스트 케이스간에 한 줄 띄우기

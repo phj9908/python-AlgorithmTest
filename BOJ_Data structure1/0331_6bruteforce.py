@@ -4,7 +4,7 @@ s=[]
  
 def dfs(start):
     if len(s)==m:
-        print(' '.join(map(str,s)))
+        print(*s)
         return
     
     for i in range(start,n+1): # 무조건 시작 숫자보다 큰숫자와 조합

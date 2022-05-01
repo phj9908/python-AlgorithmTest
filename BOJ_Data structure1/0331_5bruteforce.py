@@ -6,7 +6,7 @@ s=[]
 
 def dfs():
     if len(s)==m:
-        print(' '.join(map(str,s))) # ''.join()은 str만 처리함
+        print(*s)
         return
     for i in range(1,n+1):
         if i in s:
