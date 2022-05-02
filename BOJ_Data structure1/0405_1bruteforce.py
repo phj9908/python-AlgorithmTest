@@ -1,11 +1,12 @@
 # 10819 차이를 최대로
+# 샘플 입력엔 중복되는 수가 없지만 중복되는 수가 들어갈수 있다는 가정이 있는듯. visited=[] 필요
 
 # 백트래킹 사용ver
 n= int(input())
 num=list(map(int,input().split()))
 answer=0
 s=[]
-visited=[False]*n # 이미 계산한 숫자를 확인하기 위해
+visited=[False]*n 
 
 def dfs():
     global answer
@@ -17,7 +18,7 @@ def dfs():
         return
 
     for i in range(n):
-        if not visited[i]:  # 아직 계산이 안됐다면
+        if not visited[i]:   
             visited[i]=True
             s.append(num[i])
             dfs()

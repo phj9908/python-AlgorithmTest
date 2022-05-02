@@ -1,4 +1,4 @@
-#9012
+#9012 괄호
 import sys
 
 n = int(sys.stdin.readline())

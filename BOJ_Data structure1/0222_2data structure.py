@@ -4,7 +4,6 @@ import sys
 word = list(sys.stdin.readline().rstrip())
 
 idx=0 # 현재 인덱스
-start=0 # 태그 제외 숫자나 알파벳 시작 인덱스
 
 while idx < len(word):
     if word[idx] == '<':

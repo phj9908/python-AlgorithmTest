@@ -1,17 +1,22 @@
-n=int(input())
-arr=list(map(int,input().split()))
+word=list(input())
+idx=0
 
-for i in range(len(arr)-1,0,-1):
-    if arr[i-1]<arr[i]:
-        swap=i-1
-        break
-else:
-    print(-1)
-    exit()
-
-for i in range(len(arr)-1,0,-1):
-    if arr[i]>arr[swap]:
-        arr[i],arr[swap]=arr[swap],arr[i]
-        arr=arr[:swap+1]+sorted(arr[swap+1:])
-        print(*arr)
-        break
+while idx<len(word):
+    if word[idx]=='<':
+        idx+=1
+        while idx<len(word) and word[idx]!='>':
+            idx+=1
+        idx+=1
+    elif word[idx].isalnum():
+        start=idx
+        while idx<len(word) and word[idx].isalnum():
+            idx+=1
+        reverse_w=word[start:idx]
+        reverse_w.reverse()
+        word[start:idx]=reverse_w
+    
+    else:
+    
+        idx+=1
+    
+print(word)
