@@ -1,21 +1,35 @@
-def solution(operation):
-     
-    import heapq
 
-    min,mix=0,0
-    answer=[]
+from itertools import permutations
+from unicodedata import numeric
 
-    for i in operation:
-        oper=i.split()
-        if oper=='I':
-            heapq.heappush(answer,int(oper[1]))
-        elif len(answer)>0 and oper[0]=='D':
-            if oper[1]=='-1':
-                min=heapq.heappop(answer)
-            else:
-                max=answer.pop(answer.index(heapq.nlargest(1,answer)[0]))
-    if len(answer)==0:
-        return [0,0]
-    else:
-        return [answer.pop(answer.index(heapq.nlargest(1,answer)[0])),answer.pop(answer.index(heapq.nsmallest(1,answer)[0]))]
+# def check(n):
+#     if n<2:
+#         return False
+#     for i in range(2,int(n**0.5)+1):
+#         if n%i==0:
+#             return False
+#     return True
 
+
+# def solution(numbers):
+#     answer=[]
+#     for i in range(1,len(numbers)+1):
+#         per=list(permutations(numbers,i))
+
+#         for p in list(set(per)):
+#             p=''.join(p) # ['1','2'] => '12'
+#             if check(int(p)):
+#                 answer.append(int(p))
+    
+#     return len(set(answer))
+
+def solution(numbers):
+    a=set()
+    for i in range(1,len(numbers)+1):
+        a|=list(map(int,map(''.join,permutations(numbers,i))))
+    a-=set(range(0,2))
+    for i in range(2,int(max(a)**0.5)+1):
+        a-=set(range(2*i,max(a),i))
+    return len(a)
+
+    

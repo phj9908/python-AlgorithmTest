@@ -21,7 +21,7 @@ def solution(sccoville,K):
             break
         else:
             min2=heapq.heappop(sccoville)
-            new_min=min1+min*2
+            new_min=min1+min2*2
             heapq.heappush(sccoville,new_min)
             answer+=1
     return answer

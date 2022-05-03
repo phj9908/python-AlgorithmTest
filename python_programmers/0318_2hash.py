@@ -2,7 +2,7 @@
 #hash 의 빠른 탐색시간을 이용
 
 def solution(phone_book):
-    answer=True
+ 
     hash_table={}
 
     for i in phone_book:  # key-value 쌍 생성목적으로 일단 아무 value 할당
@@ -13,7 +13,7 @@ def solution(phone_book):
             str+=j
             if str in hash_table.keys() and str != i:
                 return False
-
+    return True
 
 # 만약 해쉬테이블이 아닌 그냥 배열을 사용했다면
 # if str in phone_book and str != i:

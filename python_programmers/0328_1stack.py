@@ -8,8 +8,7 @@ def solution(bridge_length,weight,truck_weights):
 
     while bridge or bridge_weight>0:
         answer+=1   # 트럭하나 지나감, 경과시간 +1
-        removed_truck=bridge.pop(0)
-        bridge_weight-=removed_truck
+        bridge_weight-=bridge.pop(0) # 다리를 나가는 트럭 처리
         
         if truck_weights:
             if bridge_weight+truck_weights[0]<=weight:
