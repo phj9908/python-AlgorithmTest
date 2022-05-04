@@ -9,7 +9,6 @@ for t in range(1,tc+1):
     if nums.index(max(nums))!=0:  # 가장 큰 값이 0인덱스면 아무것도 안사는것이 최대이익이기에 답은 0
         max_p=nums[-1]
         for i in range(len(nums)-1,-1,-1):
- 
             if max_p<nums[i]:
                 max_p=nums[i]
             else:

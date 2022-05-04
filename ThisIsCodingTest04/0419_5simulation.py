@@ -32,11 +32,11 @@ while 1:
     if turn==4: # 4방향 모두 갈 수 없을 때
         ny=y-d[d_n][0]
         nx=x-d[d_n][1]
-        if arr[ny][nx]==0:  # back했는데 육지라면
+        if arr[ny][nx]==0 :  # back했는데 육지라면
             y=ny
             x=nx
-        else:
-            break
+        else: 
+            break # 이해안가면 책에 적은 풀이 참고
         turn=0
 
 print(cnt)

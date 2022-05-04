@@ -1,4 +1,4 @@
-# 신뢰
+# 신뢰(다시풀어보기)
 # https://colinder.github.io/sw_21.01.04/
 
 tc=int(input())

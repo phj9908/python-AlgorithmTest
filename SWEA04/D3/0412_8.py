@@ -1,7 +1,7 @@
 # 1230 암호문 3 (다시 풀어보기)
 for t in range(1, 11) :
     length=int(input())
-    word=list(map(int,input().split()))
+    word=list(input().split())
     com_num=int(input())
     command=list(input().split())
     

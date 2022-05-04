@@ -1,30 +1,24 @@
-# 우 하 왼아 오아
-dir=[(0,1),(1,0),(1,-1),(1,1)]
-
-def check():
-    global answer
-
-    for y in range(n):
-        for x in range(n):
-            if arr[y][x]=='o':
-                for d in range(4):
-                    cnt=0
-                    ny=y
-                    nx=x
-                    while 0<=ny<n and 0<=nx<n and arr[ny][nx]=='o':
-                        ny+=dir[d][0]
-                        nx+=dir[d][1]
-                        cnt+=1
-                    if cnt==5:
-                        answer='YES'
-                        return answer
-    return 
-
-
 for t in range(1,int(input())+1):
-    n=int(input())
-    arr=[ input() for i in range(n)]
-    answer='NO'
+    arr=input().split()
+    prev=''
+    b_stack,o_stack=1,1
+    b_time,o_time,b_total,o_total=0,0,0,0
+    total=0
+    double_btn=False
 
-    check()
-    print(f'#{t} {answer}')
+    for i in arr[1:]:
+        if i.isalpha():
+            if prev==i:
+                double_btn=True
+            else:
+                double_btn=False
+                prev=i
+        elif prev=='B':
+            if double_btn:
+                b_time=abs(int(i)-b_stack)+1
+            else:
+                if o_total<abs(int(i)-b_stack):
+                    b_time=abs(int(i)-b_stack)-o_total+1
+                else:
+                    b_time=1
+

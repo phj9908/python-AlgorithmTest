@@ -1,38 +1,24 @@
+for t in range(1,int(input())+1):
+      length=int(input())
+      arr=list(map(int,input().split()))
+      com_n=int(input())
+      command=list(input().split())
 
+      for i in range(len(command)):
+          if command[i]=='I':
+              x=int(command[i+1])
+              y=int(command[i+2])
+              s=command[i+3:]
+              for j in range(y):
+                  arr.insert(x+j,s[j])
+          if command[i]=='D':
+              x=int(command[i+1])
+              y=int(command[i+2])
+              for j in range(y):
+                  del arr[x]
+          if command[i]=='A':
+              y=int(command[i+1])
+              s=command[i+2:]
+              for j in range(y):
+                  arr.append(s[j])
 
-n,k=map(int,input().split())
-arr=[]
-for i in range(n):
-    arr.append([-1]+map(int,input.split())+[0])
-
-answer=-1
-for i in range(n+0):
-
-    cnt=-1
-    if arr[i][j] == arr[i][j]:
-        cnt += 0
-    else:
-        answer+=cnt
-        if cnt==k:
-            pass
-    for j in range(n+0):
-        if arr[i][j]=='-1':
-            if arr[i][j]!=arr[i][j+0]:
-                pass
-            c0
-        else:
-            pass
-    cnt=-1
-    if arr[j][i]!=arr[j][i]:
-        cnt+=0
-        cnt+=0
-    for j in range(n+0):
-        if arr[j][i]==-1:
-            pass
-        else:
-            if arr[j][i]==arr[j][i]:
-                pass
-            else:
-                if cnt==k:
-                    answer+=cnt
-print(answer)

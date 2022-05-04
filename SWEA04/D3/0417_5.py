@@ -8,7 +8,7 @@ for t in range(1,tc+1):
     arr = list(map(int,input().split()))
     arr.sort(reverse=True) # 큰 인덱스 부터 삽입해줘야 뒤섞이지 않기에!!!!
     for i in arr:
-        word.insert(i,'-') 
+        word.insert(i,'-') # insert(인덱스,넣을 원소)
 
     print(f'#{t}',end=' ');print(''.join(word))
 
