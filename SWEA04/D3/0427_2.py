@@ -7,16 +7,14 @@ def dfs(idx,cnt): # 인덱스, 교환한 횟수
     if cnt==int(target):
         answer=max(answer,int(''.join(nums)))
         return
-    for now in range(idx,len(nums)): # range(idx,len(nums)) : 기준 인덱스로부터 오른쪽 원소만 탐색하게끔 now: 기준인덱스
-        for max_idx in range(now+1,len(nums)): # 기준인덱스의 오른쪽 인덱스
-            nums_now=nums[now] # 디버깅용
-            nums_max_idx=nums[max_idx]
-            if nums_now<=nums_max_idx: # 기준인덱스의 오른쪽인덱스마다 기준원소보다 큰지 안큰지 따지고
-                nums[now],nums[max_idx]=nums[max_idx],nums[now]  # 그렇다면 스왑
-                dfs(now,cnt+1)
-                nums[now],nums[max_idx]=nums[max_idx],nums[now] # 원상복귀
+    for i in range(idx,len(nums)): # range(idx,len(nums)) : 기준 인덱스로부터 오른쪽 원소만 탐색하게끔 now: 기준인덱스
+        for j in range(i+1,len(nums)): # 기준인덱스의 오른쪽 인덱스
+            if nums[i]<=nums[j]: # 뒤에 더 큰 원소가 있다면
+                nums[i],nums[j]=nums[j],nums[i]
+                dfs(idx,cnt+1)
+                nums[i].nums[j]=nums[j],nums[i]
 
-    if not answer and  cnt<int(target): # 이미 내림차순 정렬이 됐는데 교환 횟수가 남았을 때
+    if answer==0 and  cnt<int(target): # 위의 for문을 돌았음에도 answer=0 이고 교환 횟수가 남았을 때
         rotate=(int(target)-cnt)%2 
         if rotate:  # 남은 횟수가 홀수면 맨뒤 두개 교환(짝수면 그대로 반환)
             nums[-1],nums[-2]=nums[-2],nums[-1]

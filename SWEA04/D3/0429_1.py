@@ -1,4 +1,5 @@
 #4615. 재미있는 오셀로 게임 ( 다시풀기 )
+# 어디에 돌을 놓을지는 입력에서 정해짐, 돌을 놓기전 그때까지 만난 상대방돌들을 내돌색으로 바꿔주는 코드를 짜야함!
 # 체크할때는 돌 하나에 대해서 !가장 가까운 같은 색의 돌!을 8 방향으로 찾는다!!
 # 돌을 놓았을때 팔방을 검사해야 하며 상대방 돌인경우 좌표를 기억하고있다가 내돌을 만나는 경우 상대방 돌을 전부 자기 돌로 바꿔주는 작업이 가장 중요
 
@@ -19,6 +20,7 @@ def stoneCheck(y,x,stone):
 for t in range(1,int(input())+1):
     n,m=map(int,input().split())
 
+    # 보드판 초기화
     arr=[[0]*n for i in range(n)]
     arr[n//2-1][n//2-1]=2
     arr[n//2][n//2-1]=1
@@ -33,7 +35,8 @@ for t in range(1,int(input())+1):
             d_x=0
             d_y=0            
             changeStone=[]  # 탐색할 동안 만난 상대방 돌들 저장소
-            while 1:
+
+            while 1:        # 8방향 중 한방향 계속 탐색
                 d_x+=dx[j]
                 d_y+=dy[j]                
                 ny=y+d_y 
@@ -41,7 +44,7 @@ for t in range(1,int(input())+1):
 
                 res_stone=stoneCheck(ny,nx,stone)   # 돌이 없는지 이동이 가능한지 같은 색상을 만났는지 상대방 돌을 만났는지 판단
                 if res_stone==0:
-                    break
+                    break                           # 돌이없거나 범위 아웃이면 그 방향 탐색 종료
                 if res_stone==1:
                     changeStone.append((ny,nx))
                 else:

@@ -7,7 +7,7 @@ def recur(idx,score,cal):
         return
     sum_score=max(sum_score,score)
 
-    if idx==n:
+    if idx==n: #recur() 의 idx=1일 때 arr[0]의 값들이 들어가니까 idx=n일때 까지 sum하고 리턴
         return
     recur(idx+1,score+arr[idx][0],cal+arr[idx][1]) # 다음햄버거에 현재재료를 넣는 경우
     recur(idx+1,score,cal) # 재료를 넣지 않는 경우

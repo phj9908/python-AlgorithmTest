@@ -14,7 +14,7 @@ for t in range(1,tc+1):
             continue
 
         gap=arr[i]-1
-        for j in range(arr[i],arr[-1]+1,gap):
+        for j in range(arr[i],arr[-1]+1,gap): # 에라토스테네스의 ㅇ체와 빗스한 알고리즘, 배수를 미리 알아둔다
             arr_set.add(j)
         cnt+=1
 

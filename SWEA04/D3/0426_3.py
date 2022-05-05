@@ -5,7 +5,7 @@ for t in range(1,tc+1):
     answer='Exist'
 
     for i in range(len(word)//2):
-        if word[i]==word[-i-1] or word[i]=='?' or word[-i-1]=='?':
+        if word[i]==word[-i-1] or word[i]=='?' or word[-i-1]=='?': #  ex) adda a?ca ab?a
             continue
         answer='Not exist'
 
