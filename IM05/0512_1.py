@@ -4,12 +4,16 @@ n2=n1//2+1
 arr=[n1,n2]
 max_len=2
 answer=[]
-while n2<n1:
+while n2<=n1:
     while 1:
-        arr.append(arr[-2]-arr[-1])
-        if arr[-1]<0:
+        x=arr[-2]-arr[-1]
+        if x<0:
             break
+        arr.append(x)
     if max_len<len(arr):
         max_len=len(arr)
         answer=arr.copy()
-    arr[1]+=1
+    n2+=1
+    arr=[n1,n2]
+print(max_len)
+print(*answer)
