@@ -9,6 +9,4 @@ dif=[]
 for i in range(len(arr)-1):
     dif.append(arr[i+1]-arr[i])
 dif.sort()
-for i in range(k-1):
-    dif.pop()
-print(sum(dif))
+print(sum(dif[:len(dif)-(k-1)]))
