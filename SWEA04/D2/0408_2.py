@@ -1,4 +1,4 @@
-# 1989.초심자의 회문검사(틀렸었음)
+# 1989.초심자의 회문검사
 tc=int(input())
 for t in range(1,tc+1):
     answer=1

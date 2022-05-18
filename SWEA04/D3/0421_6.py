@@ -15,7 +15,7 @@ for t in range(1,tc+1):
     for i in range(h):
         for j in range(w):
             if arr[i][j] in serch_list:
-                tank_pos=(i,j,command_dict[arr[i][j]])
+                tank_pos=[i,j,command_dict[arr[i][j]]]
                 break
         else: 
             continue # break에 안걸리면 계속 진행
@@ -30,7 +30,7 @@ for t in range(1,tc+1):
 
             while 1:
                 dy+=move_list[tank_pos[2]][0]
-                dx+=move_list[tank_pos[2][1]]
+                dx+=move_list[tank_pos[2]][1]
 
                 if dy<0 or dy>h-1 or dx<0 or dx>w-1 or arr[dy][dx]=='#':
                     break

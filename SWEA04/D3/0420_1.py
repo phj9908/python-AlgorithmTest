@@ -1,6 +1,5 @@
 # n-queen(dfs,백트래킹 활용)다시 풀기!!
-# https://seongonion.tistory.com/103  풀이만 참고
-# https://bladejun.tistory.com/134 코드+ 풀이 참고 
+# 아레 그림과 같이 코드보기
 # https://velog.io/@hope1213/%EB%B0%B1%EC%A4%80-9663-N-Queen-%ED%8C%8C%EC%9D%B4%EC%8D%AC 그림참고!!!
 
 def dfs(arr,n,row):

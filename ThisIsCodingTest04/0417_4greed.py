@@ -7,7 +7,7 @@ for i in arr:
     cnt+=1
     if cnt>=i:
         answer+=1
-        cnt+=1
+        cnt=0
 print(answer)
 
          

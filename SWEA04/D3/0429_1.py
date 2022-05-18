@@ -9,9 +9,7 @@ dx=[0,0,-1,1,-1,-1,1,1]
 dy=[-1,1,0,0,-1,1,-1,1]
 
 def stoneCheck(y,x,stone):
-    if y<0 or y>n-1 or x<0 or x>n-1:    # 벽을 넘어가면
-        return 0
-    if arr[y][x]==0:    # 돌이 없으면
+    if y<0 or y>n-1 or x<0 or x>n-1 or arr[y][x]==0:    # 벽을 넘어가거나 돌이 없으면
         return 0
     if arr[y][x]==stone:    # 같은색 돌이면
         return 2

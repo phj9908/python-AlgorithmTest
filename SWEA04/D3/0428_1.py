@@ -1,4 +1,5 @@
 # 14178. 1차원 정원(다시 풀어보기)
+
 tc=int(input())
 for t in range(1,tc+1):
     n,d=map(int,input().split())

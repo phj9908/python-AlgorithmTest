@@ -12,19 +12,15 @@ cnt=1   # 현재좌표방문한 거 미리 count
 turn=0
 
 while 1:
-    d_n-=1  # 왼쪽으로 90도씩 회전
-    if d_n==-1: # 인덱스 아웃 예외처리
-        d_n=3
-    
     ny=y+d[d_n][0] 
     nx=x+d[d_n][1]
     # 그냥 y-=d[d_n][0] 이런식으로 하면 오답나옴!
 
     if visited[ny][nx]==0 and arr[ny][nx]==0:    # 방문 안해본 육지라면
         visited[ny][nx]=1
+        y,x=ny,nx
         cnt+=1
         turn=0
-        continue # 아래의  조건문들 pass
 
     else:   # 회전했는데 가본 칸이나 바다일 때
         turn+=1
@@ -36,8 +32,12 @@ while 1:
             y=ny
             x=nx
         else: 
-            break # 이해안가면 책에 적은 풀이 참고
+            break
         turn=0
+
+    d_n+=1  # 왼쪽으로 90도씩 회전
+    if d_n==4: # 인덱스 아웃 예외처리
+        d_n=0
 
 print(cnt)
             

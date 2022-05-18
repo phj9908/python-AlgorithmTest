@@ -15,3 +15,17 @@ for t in range(1,tc+1):
                 sum+=max_p-nums[i]
              
     print(f'#{t}',end=' ');print(sum)
+
+#내가 생각한 풀이 (확인은 안함)
+# answer=0
+# stack=[]
+# if arr.index(max(arr))==0:
+#     print(0)
+#     exit()
+# for i in range(len(arr)):
+#     if stack[-1]<arr[i]:
+#         while stack:
+#             answer+=arr[i]-stack.pop()
+#         continue
+#     stack.append(arr[i])
+#

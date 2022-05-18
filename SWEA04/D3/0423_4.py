@@ -6,11 +6,11 @@ for t in range(1,tc+1):
     
     for i in range(n):
         arr.append(int(input()))
-    arr_set=set()
 
+    arr_set=set()
     cnt=0
     for i in range(1,len(arr)):
-        if arr[i] in arr_set:
+        if arr[i] in arr_set: # 앞원소의 배수에 속한다면
             continue
 
         gap=arr[i]-1
