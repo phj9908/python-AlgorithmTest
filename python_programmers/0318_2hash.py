@@ -2,7 +2,6 @@
 #hash 의 빠른 탐색시간을 이용
 
 def solution(phone_book):
- 
     hash_table={}
 
     for i in phone_book:  # key-value 쌍 생성목적으로 일단 아무 value 할당

@@ -14,7 +14,6 @@ def solution(particiation,completion):
         if v>0:
             answer=k
     return answer
-print(solution(["mislav", "stanko", "mislav", "ana"],["stanko", "ana", "mislav"]))
 
 # # 다른 풀이1(딕셔너리 이용)
 # import collections

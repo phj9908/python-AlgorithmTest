@@ -1,7 +1,6 @@
 # 프린터
 from collections import deque
 
-
 def solution(priorities,location):
 
     arr=[(i,v) for i,v in enumerate(priorities)]
@@ -16,3 +15,10 @@ def solution(priorities,location):
             answer+=1   
             if location==item[0]:
                 return answer
+
+# 2 1 3 2 에서 location = 0이라하면
+# 2 1 3 2
+# 1 3 2 2
+# 3 2 2 1 -> 여기서부터 else조건문으로 감!! answer+=1
+# 2 2 1 -> answer+=1
+# 2 1  -> answer+=1 => answer=2

@@ -1,5 +1,5 @@
 # 정렬된 배열에서 특정 수의 개수 구하기(다시풀기)
-
+# https://folivora.tistory.com/83 bisect 함수 설명 참고
 # 내장함수 bisect 활용 ver
 from bisect import bisect_left,bisect_right
 

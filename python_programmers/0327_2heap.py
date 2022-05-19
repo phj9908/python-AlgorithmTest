@@ -17,7 +17,7 @@ def solution(jobs):
     while i<len(jobs):
         for j in jobs:
             if start < j[0] <= now:
-                heapq.heappush(heap,[j[1],j[0]]) # 작업의 소요시간 기준으로 최소힙 만들기
+                heapq.heappush(heap,[j[1],j[0]]) # 작업의 소요시간 기준으로(맨 앞 인덱스에 두기) 최소힙 만들기 , 맨 처음엔 작업 요청시간이 0인 job만 heappush
         if len(heap)>0:
             curr=heapq.heappop(heap)
             start=now

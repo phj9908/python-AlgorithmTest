@@ -2,24 +2,21 @@
 
 def solution(clothes):
     
-    table={}
+    hash={}
     for v,k in clothes:
-        if k in table.keys():
-            table[k].append(v)
+        if k in hash.keys():
+            hash[k].append(v)
         else:
-            table[k]=[v] # 같은 key의 다른 value가 들어올 수 있기에 리스트안에 할당한 형태여야 함!!
+            hash[k]=[v] # 같은 key의 다른 value가 들어올 수 있기에 리스트안에 할당한 형태여야 함!!
             
     answer=1    
-    for v in table.values():
+    for v in hash.values():
         answer *= len(v)+1 # 옷의 갯수+ 안입는 경우
 
         # 예를 들어 상의(key)에 존재하는 옷(value)이 2개, 하의에 존재하는 옷이3개면 총 입을수 있는 경우의 수는 2*3 인 원리 이용
-        # 근데 여기서 상하의 하나만 입을수 있는 경우엔 (2+1)*(3+1)
+        # 근데 여기서 상하의중에 상하의 하나만 입을수 있는 경우엔 (2+1)*(3+1)
 
     return answer-1 # 최소 한개의 의상은 입기에 -1해주기
-
-
-
 
 # # 다른 풀이(Counter,reduce이용)
 # Counter() : 'hello' => {'h':1,'e':1,'l':2,'o':1}

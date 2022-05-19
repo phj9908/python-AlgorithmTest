@@ -1,4 +1,4 @@
-# 기능 개발
+# 기능 개발***
 
 def solution(progresses, speeds):
     # print(progresses)

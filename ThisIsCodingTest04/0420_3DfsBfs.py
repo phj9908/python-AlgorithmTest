@@ -17,11 +17,7 @@ def bfs(y,x):
         for i in range(4):
             nx=x+dx[i]
             ny=y+dy[i]
-            if nx>=m or nx<0 or ny>=n or ny<0:
-                continue
-            if arr[ny][nx]==0:
-                continue
-            if arr[ny][nx]==1:
+            if  0<ny<n-1 and 0<nx<m-1 and arr[ny][nx]==1:
                 arr[ny][nx]=arr[y][x]+1 # 바로 전좌표의 가중치에 +1 해서 이때까지 이동한 거리 기록
                 queue.append((ny,nx))
 
