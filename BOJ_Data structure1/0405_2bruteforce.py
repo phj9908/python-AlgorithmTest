@@ -18,7 +18,6 @@ def dfs(start,curr,value):
             answer=min(answer,value+arr[curr][start])
         return
     for i in range(n):  #도시의 개수 만큼 반복
-        
         #만약 현재 도시에서 갈 수 있는 도시의 비용이 0이 아니고 이미 방문한 도시가 아니며 그 비용값이 저장되어있는 최소값보다 작다면
         if arr[curr][i]!=0 and i not in s and value<answer:
             s.append(i)

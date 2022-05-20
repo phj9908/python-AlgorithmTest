@@ -24,7 +24,7 @@ while True:
     print() # 테스트 케이스간에 한 줄 띄우기
 
 # # combinations 활용
-# from itertools import combinations # => 가능한 조합들 반환 / prmutations은 존재하는 순열들 반환
+# from itertools import combinations # => 가능한 조합들 반환 / permutations은 존재하는 순열들 반환
 
 # while True:
 #     nums= list(map(int,input().split()))

@@ -7,8 +7,8 @@ ten_num=0
 res=[] # res를 문자열로 하고 추가한느 식이면 틀렸다고 뜸
 
 pow=0
-for i in a_num[::-1]: # a진법을 십진수로 변환
-    ten_num+=i*(a**pow)
+for i in a_num[::-1]:
+    ten_num+=i*(a**pow) # a진법을 십진수로 변환
     pow+=1
 
 while ten_num:  # 십진수를 b진법으로 변환

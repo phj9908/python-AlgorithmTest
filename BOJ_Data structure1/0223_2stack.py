@@ -10,7 +10,7 @@ import sys
 
 n = int(sys.stdin.readline())
 nums = list(map(int, sys.stdin.readline().split())) 
-nums_cnt = Counter(nums) # Counter 클래스 객체 생성
+nums_cnt = Counter(nums) # Counter 딕셔너리 생성
 stack = [] # nums인덱스 할당용
 result=[-1]*n
 

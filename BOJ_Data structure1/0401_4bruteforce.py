@@ -17,7 +17,7 @@ def dfs():
 
     remember_me=0   # 전역변수로하면 안됨(디버깅하면 이해됨)
     for i in range(len(arr)):
-        if visited[i]==0 and arr[i]!=remember_me:
+        if visited[i]==0 and arr[i]!=remember_me: # remember_me로 동일한 값의 원소를 판별하고, i not in s 조건문 역할도 함
             s.append(arr[i])
             visited[i]=True
             remember_me=arr[i]

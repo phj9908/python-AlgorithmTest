@@ -4,27 +4,36 @@
 # 다시 풀어보기
 
 str = input()
-result=[]
-stack=[] 
+prec = {  # 연산자 우선순위
+    '*': 3, '/': 3,
+    '+': 2, '-': 2,
+    '(': 1
+}
 
-for i in str:
-    if i.isalpha():
-        result.append(i)
-    elif i =='*' or i == '/':
-        while stack and (stack[-1]=='*' or stack[-1] =='/'): # ex) A*B*C
-            result.append(stack.pop())
-        stack.append(i)
-    elif i == '+' or i=='-':
-        while stack and stack[-1] != '(':
-            result.append(stack.pop())  
-        stack.append(i)
-    elif i ==')':
-        while stack and stack[-1] != '(':
-            result.append(stack.pop()) 
-        stack.pop() # 스택의 '('pop
-    else : # (
-        stack.append(i)
-while stack:
-    result.append(stack.pop())
+def solution(S):
+    opStack = []
+    answer = ''
 
-print(''.join(result)) 
+    for s in S:
+        if s.isalpha():
+            answer += s
+        if s == '(':
+            opStack.append(s)
+        if s == ')':  # 닫는 괄호를 만나면
+            while opStack and opStack[-1] != '(':  # 열린 괄호를 만날 때까지
+                answer += opStack.pop()
+            opStack.pop()  # 스택의 '(' pop
+        else: # 연산자
+            if len(opStack)>0:  # 그냥 if opStack:하면 인덱스 에러
+                res = opStack[-1]
+                if prec[s] <= prec[res]:  # 스택의 마지막 원소가 현재 연산자의 우선순위보다 높거나 같으면
+                    while opStack:
+                        answer += opStack.pop()
+            opStack.append(s)
+
+    while opStack:
+        answer += opStack.pop()
+
+    return answer
+
+print(''.join(solution(str)))

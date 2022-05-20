@@ -1,4 +1,4 @@
-# 17413 단어 뒤집기 2
+# 17413 단어 뒤집기 2(다시 풀기)
 
 import sys
 word = list(sys.stdin.readline().rstrip())

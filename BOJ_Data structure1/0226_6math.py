@@ -2,7 +2,7 @@
 
 from itertools import combinations
 
-def gcd(a,b):
+def gcd(a,b): # 최대공약수 함수
     if b==0:
         return a
     return gcd(b,a%b)

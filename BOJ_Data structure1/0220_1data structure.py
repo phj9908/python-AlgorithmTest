@@ -10,8 +10,6 @@ for _ in range(t):
     for i in words: # i='am' 일 때
         reverse_words.append(i[::-1])
     print(*reverse_words)
-    #result = ' '.join(reverse_words) # 마지막에 단어사이 공백 추가
-    #print(result)
 
 # 다른 방법 : 파이썬 내장함수(reversed(리스트))
-# 삼중 for문 (sentence/word/char) reverse_arr += char 거꾸로 할당
+
