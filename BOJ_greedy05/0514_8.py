@@ -5,6 +5,7 @@ n=int(input())
 arr=input()
 b_cnt,r_cnt=1,1 # 모두 b로 덮인 경우, 모두 r로 덮인 경우
 
+# 모두 B로 덮인 경우
 i=0
 start_i=-1
 while i<len(arr):
@@ -16,6 +17,7 @@ while i<len(arr):
         start_i=-1
     i+=1
 
+# 모두 R로 덮인 경우
 i=0
 start_i=-1
 while i<len(arr):
