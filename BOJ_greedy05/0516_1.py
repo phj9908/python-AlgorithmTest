@@ -1,6 +1,6 @@
 # 2812 크게만들기 (다시 풀기)
 n,k =map(int,input().split())
-num=list(input())
+num=input()
 stack=[]
 
 for i in range(n):

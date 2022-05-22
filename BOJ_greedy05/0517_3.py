@@ -3,7 +3,7 @@
 n,weight=map(int,input().split()) # 마을 수, 트럭 용량
 m=int(input()) # 박스 갯수
 arr=[list(map(int,input().split())) for i in range(m)]
-arr=sorted(arr,key=lambda x:x[1]) # 도착점 기준으로 정렬
+arr=sorted(arr,key=lambda x:x[1]) # 빠른 도착점 기준으로 정렬
 
 box=[weight]*n # 각 마을에서 기록할 박스용량
 total=0
