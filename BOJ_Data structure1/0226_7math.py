@@ -5,10 +5,10 @@ a=list(map(int,input().split()))
 res=0
 
 def gcd(a,b):
-    if b==0:
-        return a
+    if a==0:
+        return b
     else :
-        return gcd(b,a%b)
+        return gcd(b%a,a)
 
 dif=[]
 for i in range(n): # 각 동생들과 수빈이 사이 거리 도출

@@ -11,4 +11,4 @@ h=total//3600
 m=(total%3600)//60
 s=total%60
 print('%02d:%02d:%02d'%(h,m,s)) # 08:00:00
-
+# print('{:02d}:{:02d}:{:02d}'.format(h,m,s)) # 08:00:00

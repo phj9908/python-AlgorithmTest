@@ -17,4 +17,4 @@ for _ in range(int(input())):
         else:
             total+=gcd(com[0],com[1])
 
-print(total)
+    print(total)

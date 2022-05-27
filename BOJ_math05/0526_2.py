@@ -4,6 +4,7 @@ n,b=input().split()
 b=int(b)
 
 sum=0
-for i in range(len(n)-1,-1,-1):
-    sum+=(b**(len(n)-1-i))*arr.index(n[i])
+n=n[::-1]
+for i in range(len(n)):
+    sum+=(b**i*arr.index(n[i]))
 print(sum)

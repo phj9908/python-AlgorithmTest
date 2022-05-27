@@ -11,6 +11,7 @@ for i in range(n):
         stack+=num[i:] # 지금 num부터 마지막 숫자까지 원소를 stack에 추가(append와 다름 주의!!)
         break
     stack.append(num[i])
+
 if k>0:
     stack=stack[:-k] # k가 남았지만 내림차순 정렬이 된경우, 뒤에서부터 k개 제거
 print(''.join(stack))

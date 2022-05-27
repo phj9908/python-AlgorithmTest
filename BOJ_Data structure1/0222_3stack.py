@@ -9,7 +9,7 @@ for i in range(len(str)):
         stack.append('(')
     else:
         stack.pop()
-        if str[i-1]=='(': # 주의! stack[-1]이 아니고 str[i-1]임!!
+        if str[i-1]=='(': # 주의! stack[i-1]이 아니고 str[i-1]임!!
             ans+=len(stack)
         else :              #'))'일 때 : 쇠막대기 끄트머리 표현
             ans +=1

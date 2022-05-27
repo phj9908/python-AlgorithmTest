@@ -5,10 +5,10 @@ import heapq
 
 n=int(input())
 arr=[ list(map(int,input().split())) for i in range(n)]
-arr=sorted(arr,key=lambda x:x[0])
+arr=sorted(arr)
 heap=[]
 for s,e in arr:
     if heap and s>=heap[0]: # 이전 종료시간보다 이번 시작시간이 늦다면
         heapq.heappop(heap) # 이전 종료시간 pop
-    heapq.heappush(heap,e) # 새로운 회의실 추가
+    heapq.heappush(heap,e) # 새로운 회의실 추가, 종료시간만 할당
 print(len(heap))

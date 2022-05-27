@@ -17,9 +17,10 @@ def dfs(start):
             exit()
         return 
     for i in arr[start:]:
-        s.append(i)
-        dfs(arr.index(i)+1)
-        s.pop()
+        if i not in s:
+            s.append(i)
+            dfs(arr.index(i))
+            s.pop()
 
 dfs(0)
 

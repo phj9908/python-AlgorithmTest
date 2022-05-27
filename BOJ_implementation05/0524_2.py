@@ -10,7 +10,7 @@ for _ in range(n):
             hash[i]+=1
         else:
             hash[i]=1
-    start=min(start,s) # 입력받으면서 입력값중에 최솟값 찾기
+    start=min(start,s) # for문 입력받으면서 입력값중에 최솟값 찾기
     end=max(end,e)
 s=0
 first=True

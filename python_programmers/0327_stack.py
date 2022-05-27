@@ -19,6 +19,6 @@ def solution(priorities,location):
 # 2 1 3 2 에서 location = 0이라하면
 # 2 1 3 2
 # 1 3 2 2
-# 3 2 2 1 -> 여기서부터 else조건문으로 감!! answer+=1
+# 3 2 2 1 -> 여기서부터 else조건문으로 감!!
 # 2 2 1 -> answer+=1
-# 2 1  -> answer+=1 => answer=2
+# 2 1  -> => answer+=1  => answer=2

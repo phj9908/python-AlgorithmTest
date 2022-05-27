@@ -4,12 +4,12 @@
 
 num=1000
 sieve=[]
-for i in range(2,num):
+for i in range(2,num): # 소수로만 이뤄진 sieve 만들기
     for j in range(2,i):
         if i%j ==0:
             break
     else:
-        sieve.append(i) # 주의!!! sieve의 인덱스는 0부터 시작안함!!
+        sieve.append(i)
 
 tc=int(input())
 for t in range(1,tc+1):

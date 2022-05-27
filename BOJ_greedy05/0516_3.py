@@ -16,7 +16,7 @@ while weight:
         for j in weight:
             if i>=j:
                 weight.remove(j)
-                break
+                break       # 반복문 쓰면서 리스트 삭제할 때 , 이처럼 이중 for문해서 삭제할때마다 break
         if len(weight)==0:
             print(answer)
             exit()

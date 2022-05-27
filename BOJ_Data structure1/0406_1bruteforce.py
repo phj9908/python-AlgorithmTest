@@ -4,7 +4,8 @@
 def dfs(start):
     if len(s)==6:
         print(*s)
-        return 
+        return
+
     for i in s[start:]:
         if i in s:
             continue

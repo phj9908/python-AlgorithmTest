@@ -6,7 +6,7 @@ import sys
 n,m,r=list(map(int,input().split()))
 arr=[ list(map(int,sys.stdin.readline().strip().split())) for i in range(n) ]
 d=[(1,0),(0,1),(-1,0),(0,-1)] # 반시계방향
-min_k=min(n,m)//2
+min_k=min(n,m)//2 # 겉의 사각형부터 맨 안쪽의 사각형까지 몇번 들어가야 하는지(문제 조건 참고)
 res_arr=deque([deque() for i in range(min_k)])
 
 k=0

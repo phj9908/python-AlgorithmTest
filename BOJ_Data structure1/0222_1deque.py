@@ -1,6 +1,6 @@
 #10866 덱
 from collections import deque
-from queue import Empty
+
 import sys
 
 deq=deque()
