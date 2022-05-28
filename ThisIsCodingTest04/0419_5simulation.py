@@ -36,7 +36,7 @@ while 1:
         turn=0
 
     d_n+=1  # 왼쪽으로 90도씩 회전
-    if d_n==4: # 인덱스 아웃 예외처리
+    if d_n==4:
         d_n=0
 
 print(cnt)

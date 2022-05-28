@@ -30,8 +30,8 @@ print(answer)
 # # permutation 사용 ver
 # from itertools import permutations
 
-# n= int(input())
-# num=list(map(int,input().split()))
+# n= int(in.txt())
+# num=list(map(int,in.txt().split()))
 # answer=0
 
 # per=permutations(num)

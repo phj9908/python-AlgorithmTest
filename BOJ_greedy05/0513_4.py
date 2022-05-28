@@ -1,7 +1,7 @@
 # 1343 폴리오미노(다시풀기)
 
 # # 풀이1) replace()활용 : replace()는 왼쪽부터 해당문자열을 찾아 치환함.
-# word=input()
+# word=in.txt()
 # word=word.replace('XXXX','AAAA') # 왼쪽부터 모든 'XXXX'를 찾아 'AAAA'로 치환한 뒤
 # word=word.replace('XX','BB') # 바뀐 문자열에서 남은 'XX'를 'BB'로 치환
 #
@@ -51,7 +51,7 @@ else:
 #
 #     return
 #
-# word=list(input())
+# word=list(in.txt())
 # length=0
 # start_i=-1
 # if '.' in word:

@@ -21,7 +21,7 @@ dfs()
 # permutataion 이용한 ver.
 # from itertools import permutations
 
-# n,m = map(int,input().split())
+# n,m = map(int,in.txt().split())
 # per_list=[ i for i in range(1,n+1)] # [1,2,3,4]
 # per_list=list(permutations(per_list,m))
 # for i in per_list:

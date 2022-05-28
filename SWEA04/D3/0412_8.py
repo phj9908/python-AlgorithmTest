@@ -1,4 +1,4 @@
-# 1230 암호문 3 (다시 풀어보기)
+# 1230 암호문 3
 for t in range(1, 11) :
     length=int(input())
     word=list(input().split())

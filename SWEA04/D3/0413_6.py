@@ -8,7 +8,7 @@ def check(num):
     sqrt_num=math.sqrt(num)
     num= str(num)
 
-    if sqrt_num==float(int(sqrt_num)): # 루트씌운 수가 정수가 아닌수를 거르기 
+    if sqrt_num.is_integer(): # 루트씌운 수가 정수가 아닌수를 거르기
         sqrt_num=str(int(sqrt_num))
 
         if num==num[::-1] and sqrt_num == sqrt_num[::-1]:
@@ -18,7 +18,7 @@ def check(num):
 
 # 내 풀이
 # import math
-# tc=int(input())
+# tc=int(in.txt())
 
 # def check(arr):
 #     arr=list(arr)
@@ -30,7 +30,7 @@ def check(num):
 #     return True
                 
 # for t in range(1,tc+1):
-#     a,b=map(int,input().split())
+#     a,b=map(int,in.txt().split())
 #     answer=0
 #     for i in range(a,b+1):
 #         n=str(i)

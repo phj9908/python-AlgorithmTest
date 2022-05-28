@@ -1,10 +1,10 @@
 # 1206. [S/W 문제해결 기본] 1일차 - View
 import sys
-sys.stdin=open('input.txt')
+sys.stdin=open('in.txt.txt')
 
 for t in range(1,11):
     length=100
-    #length=int(input())
+    #length=int(in.txt())
 
     arr=list(map(int,sys.stdin.readline().split()))
     answer=0

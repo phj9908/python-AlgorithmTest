@@ -16,10 +16,10 @@ if y>n:
 print(f'{x} {y}')
 
 # # 단순이동(2차원 배열)으로 풀 경우 시간 초과됨!
-# m,n=map(int,input().split())
+# m,n=map(int,in.txt().split())
 # arr= [ [0]*m for i in range(n)]
-# x,y=map(int,input().split())
-# t=int(input())
+# x,y=map(int,in.txt().split())
+# t=int(in.txt())
 #
 # d=[(1,1),(1,-1),(-1,-1)] # 오위 왼위 왼아
 # dir_arr=[0,1,2,1,0]

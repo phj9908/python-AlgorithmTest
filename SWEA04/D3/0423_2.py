@@ -4,7 +4,7 @@ for t in range(1,tc+1):
     n=int(input())
 
     # 입력받는 수 문자열 하나로 만들기 (방법1)
-    # arr=list(input().split()) ['9','5','3']
+    # arr=list(in.txt().split()) ['9','5','3']
     # arr=''.join(arr) '953'
 
     #                            (방법2)

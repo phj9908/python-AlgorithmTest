@@ -25,8 +25,8 @@ print(total)
 
 
 # 배열ver.왜 틀렸는지 모르겠음
-# l,r=input().split()
-# word=input()
+# l,r=in.txt().split()
+# word=in.txt()
 # l_y,l_x,r_y,r_x=0,0,0,0
 # arr=[
 #     'qertyuiop',

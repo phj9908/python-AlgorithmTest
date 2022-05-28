@@ -33,8 +33,8 @@ dfs(0)
 # # combinations 활용ver
 # from itertools import combinations
 
-# n,m = map(int,input().split())
-# chars=sorted(input().split())
+# n,m = map(int,in.txt().split())
+# chars=sorted(in.txt().split())
 # a_asc=set(['a','e','i','o','u'])
 
 # for char in list(combinations(chars,n)):

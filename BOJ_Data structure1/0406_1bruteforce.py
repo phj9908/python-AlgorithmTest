@@ -28,7 +28,7 @@ while True:
 # from itertools import combinations # => 가능한 조합들 반환 / permutations은 존재하는 순열들 반환
 
 # while True:
-#     nums= list(map(int,input().split()))
+#     nums= list(map(int,in.txt().split()))
 #     n=nums[0]
 #     if n==0:
 #         break

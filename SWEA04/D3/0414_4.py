@@ -1,7 +1,7 @@
 # 1216. [S/W 문제해결 기본] 3일차 - 회문2
 
 import sys
-sys.stdin = open("input.txt", "r") 
+sys.stdin = open("in.txt.txt", "r")
 
 def check(arr,len):
     res_length=0
@@ -15,7 +15,7 @@ def check(arr,len):
     return res_length
 
 for t in range(1,11):
-    #tc=int(input())
+    #tc=int(in.txt())
     arr=[]
     for i in range(100):
         arr.append(list(sys.stdin.readline().strip()))

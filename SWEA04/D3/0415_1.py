@@ -3,6 +3,6 @@ tc= int(input())
 for t in range(1,tc+1):
     n,m=map(int,input().split())
     
-    y = 2*m-n # x+y=m ,2*x+y=n 연립방정식
-    x = m-y
+    x=n-m # x+y=m ,2*x+y=n 연립방정식
+    y=m-x
     print(f'#{t} {y} {x}')

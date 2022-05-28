@@ -27,7 +27,7 @@ dfs(0)
 # permutation ver.
 # from itertools import permutations
 
-# num= [int(input()) for _ in range(9)]
+# num= [int(in.txt()) for _ in range(9)]
 # per_list=permutations(num,2) # -> (3,5),(12,5) ...
 # for i in per_list:
 #     if sum(num) - sum(i) == 100:

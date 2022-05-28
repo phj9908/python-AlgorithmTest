@@ -18,7 +18,7 @@ print(sum(dp[n]))
 #-다른 답안
 # 각 자릿수의 수들을 나열하여 규칙발견
 #https://pacific-ocean.tistory.com/195
-# n=int(input())
+# n=int(in.txt())
 # dp=[0,1,1]
 # for i in range(3,91):
 #     dp.append(dp[i-2]+dp[i-1])

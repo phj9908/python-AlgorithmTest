@@ -1,7 +1,7 @@
 #16926 배열돌리기1
 from collections import deque
 import sys
-# sys.stdin=open('input.txt','r')
+# sys.stdin=open('in.txt.txt','r')
 
 n,m,r=list(map(int,input().split()))
 arr=[ list(map(int,sys.stdin.readline().strip().split())) for i in range(n) ]

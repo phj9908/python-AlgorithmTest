@@ -2,7 +2,7 @@
 # https://deok2kim.tistory.com/143 
 
 for t in range(1,int(input())+1):
-    #words=list(input())
+    #words=list(in.txt())
     a,b=input().split()
     a=' '+a
     b=' '+b

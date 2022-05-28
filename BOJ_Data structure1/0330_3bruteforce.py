@@ -9,7 +9,7 @@ while True:
 print(year)
 
 # 내 풀이, 너무 복잡하게 풀었다..더 빠르긴 함
-# a,b,c=map(int,input().split())
+# a,b,c=map(int,in.txt().split())
 # cnt=[0]*3
 # n=[0]*3
 # while True:
