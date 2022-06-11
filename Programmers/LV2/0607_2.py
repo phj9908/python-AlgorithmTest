@@ -28,7 +28,7 @@ def solution2(n):
 #     answer = []
 #     cnt = 1
 #     while 1:
-#         for i in list(product(arr,repeat=cnt)): # cnt길이의 중복순열 생성
+#         for i in list(product(arr,repeat=cnt)): # procuct( ,cnt) : cnt길이의 중복순열 생성
 #             answer.append(''.join(i))
 #             if len(answer)>=n:
 #                 break
